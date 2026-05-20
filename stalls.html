@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All Stalls · Intreccio Rasa Milan 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--cream:#F6EDD8;--dark:#120902;--terra:#C8572F;--saffron:#F5A200;--ochre:#D4842A;--forest:#1B3A28;--red:#D43420;--cream2:#FAF3E2;--text:#1A0D05}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:1.4rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:background .3s,border .3s}
+nav.scrolled{background:rgba(246,237,216,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08)}
+nav.nav-dark-hero:not(.scrolled) .nav-logo,
+nav.nav-dark-hero:not(.scrolled) .nav-links a{color:var(--cream)}
+nav.nav-dark-hero:not(.scrolled) .nav-links a:hover,
+nav.nav-dark-hero:not(.scrolled) .nav-links a.active{color:var(--saffron)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;letter-spacing:.12em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:.5rem}
+.nav-logo .star{color:var(--terra);font-size:1.3rem;line-height:1}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--text);font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--terra)}
+.nav-btn{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;background:var(--terra);color:#fff;padding:.6rem 1.5rem;text-decoration:none;font-weight:600;transition:background .2s}
+.nav-btn:hover{background:var(--red)}
+.marquee{background:var(--terra);padding:1rem 0;overflow:hidden;white-space:nowrap}
+.mq-track{display:inline-flex;animation:mq 28s linear infinite}
+.mq-item{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--cream);letter-spacing:.1em;padding:0 1.5rem}
+.mq-dot{color:var(--saffron);padding:0 .5rem}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sec-label{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--saffron);display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.sec-label::before{content:'';display:block;width:36px;height:1px;background:var(--saffron)}
+.sec-label.center{justify-content:center}.sec-label.center::before{display:none}
+.fa{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fa.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:1.1rem 2.2rem;font-family:'Jost',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:all .25s}
+.btn-terra{background:var(--terra);color:#fff}.btn-terra:hover{background:var(--red)}
+.btn-outline{background:transparent;border:2px solid currentColor}.btn-dark{color:var(--dark)}.btn-light{color:var(--cream)}
+.btn-outline.btn-dark:hover{background:var(--dark);color:var(--cream)}
+.btn-outline.btn-light:hover{background:var(--cream);color:var(--terra)}
+.page-hero{background:var(--dark);padding:12rem 4rem 7rem;position:relative;overflow:hidden}
+.page-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.18}
+.page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,9vw,10rem);line-height:.88;color:var(--cream);position:relative;z-index:1}
+.page-hero h1 span{color:var(--saffron)}
+.page-hero p{color:rgba(246,237,216,.65);font-size:1.05rem;line-height:1.85;max-width:600px;margin-top:1.5rem;position:relative;z-index:1}
+footer{background:var(--dark);padding:5rem 4rem 3rem}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:3.5rem}
+.ft-brand .logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--cream);letter-spacing:.12em;margin-bottom:.9rem;display:block}
+.ft-brand p{color:rgba(246,237,216,.45);font-size:.82rem;line-height:1.75;max-width:270px}
+.ft-col h4{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron);margin-bottom:1.4rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{margin-bottom:.7rem}
+.ft-col ul li a{color:rgba(246,237,216,.5);text-decoration:none;font-size:.88rem;transition:color .2s}
+.ft-col ul li a:hover{color:var(--cream)}
+.ft-btm{display:flex;justify-content:space-between;align-items:center;color:rgba(246,237,216,.3);font-size:.75rem}
+
+.stalls-intro{background:var(--dark);padding:5rem 4rem}
+.stalls-filters{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.filter-btn{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;padding:.5rem 1.2rem;border:1px solid rgba(255,255,255,.15);color:rgba(246,237,216,.5);cursor:pointer;transition:all .2s;background:transparent}
+.filter-btn.active,.filter-btn:hover{border-color:var(--saffron);color:var(--saffron)}
+.stall-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:0 4rem 6rem;background:var(--dark)}
+.stall-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);overflow:hidden;transition:border-color .3s;text-decoration:none;display:block}
+.stall-card:hover{border-color:var(--saffron)}
+.stall-card.wide{grid-column:span 2}
+.stall-card img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .5s}
+.stall-card.wide img{height:270px}
+.stall-card:hover img{transform:scale(1.04)}
+.stall-ph{width:100%;height:220px;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.stall-card.wide .stall-ph{height:270px}
+.stall-body{padding:1.4rem}
+.stall-tag{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;padding:.25rem .8rem;margin-bottom:.8rem;display:inline-block;border-radius:2px}
+.t-touch{background:rgba(200,87,47,.22);color:#E8875F}
+.t-smell{background:rgba(27,58,40,.55);color:#72C9A0;border:1px solid rgba(114,201,160,.25)}
+.t-sight{background:rgba(90,90,200,.2);color:#A4A4F8}
+.t-taste{background:rgba(245,162,0,.18);color:var(--saffron)}
+.t-action{background:rgba(212,52,32,.22);color:#F08070}
+.stall-body h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--cream);margin-bottom:.5rem;line-height:1.2}
+.stall-body p{font-size:.8rem;color:rgba(246,237,216,.5);line-height:1.65}
+.zone-header{padding:3rem 4rem 1.5rem;background:var(--dark)}
+.zone-header h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:var(--cream);line-height:1;display:flex;align-items:center;gap:1rem}
+.zh-num{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);display:block;margin-bottom:.3rem}
+.paan-special{background:#0C0015;padding:5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+</style>
+</head>
+<body>
+
+<nav id="nav" class="nav-dark-hero">
+  <a href="index.html" class="nav-logo"><span class="star">✦</span> INTRECCIO RASA</a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="">About</a></li>
+    <li><a href="experience.html" class="">Experience</a></li>
+    <li><a href="stalls.html" class="active">Stalls</a></li>
+    <li><a href="visit.html" class="">Visit</a></li>
+    <li><a href="contact.html" class="">Contact</a></li>
+  </ul>
+  <a href="visit.html" class="nav-btn">Free Entry →</a>
+</nav>
+
+
+<section class="page-hero">
+  <img class="page-hero-img" src="imgs/hero_market.jpg" alt="">
+  <div class="fa"><div class="sec-label">All Experiences</div>
+  <h1>THE<br><span>STALLS</span></h1>
+  <p>Over 25 immersive stalls, workshops, and installations across five sensory zones — each one a fragment of ordinary Indian life, made extraordinary.</p></div>
+</section>
+
+<div class="marquee"><div class="mq-track">
+<span class="mq-item">WITH LOVE FROM INDIA</span><span class="mq-dot">✦</span>
+<span class="mq-item">MILAN 2026</span><span class="mq-dot">✦</span>
+<span class="mq-item">10 LUGLIO</span><span class="mq-dot">✦</span>
+<span class="mq-item">INTRECCIO RASA</span><span class="mq-dot">✦</span>
+<span class="mq-item">FREE ENTRY</span><span class="mq-dot">✦</span>
+<span class="mq-item">ART · CRAFT · HERITAGE</span><span class="mq-dot">✦</span>
+<span class="mq-item">WITH LOVE FROM INDIA</span><span class="mq-dot">✦</span>
+<span class="mq-item">MILAN 2026</span><span class="mq-dot">✦</span>
+<span class="mq-item">10 LUGLIO</span><span class="mq-dot">✦</span>
+<span class="mq-item">INTRECCIO RASA</span><span class="mq-dot">✦</span>
+<span class="mq-item">FREE ENTRY</span><span class="mq-dot">✦</span>
+<span class="mq-item">ART · CRAFT · HERITAGE</span><span class="mq-dot">✦</span>
+</div></div>
+
+
+<div class="stalls-intro">
+  <div class="fa" style="margin-bottom:1rem"><div class="sec-label">Filter by Zone</div></div>
+  <div class="stalls-filters fa d1">
+    <span class="filter-btn active">All Zones</span>
+    <span class="filter-btn">🤲 Touch</span>
+    <span class="filter-btn">👃 Smell</span>
+    <span class="filter-btn">👁 Sight</span>
+    <span class="filter-btn">🍵 Taste</span>
+    <span class="filter-btn">✋ Action</span>
+  </div>
+</div>
+
+<!-- TOUCH -->
+<div class="zone-header" id="touch"><h2><span class="zh-num">Zone 01 — Touch</span>🤲 MATERIAL &amp; CRAFT</h2></div>
+<div class="stall-grid">
+  <div class="stall-card wide fa" id="chanakya">
+    <img src="imgs/blocks.jfif" alt="Chanakya textiles">
+    <div class="stall-body"><span class="stall-tag t-touch">Touch · Zone 01</span><h3>Chanakya International — Swatch Book Exhibition</h3><p>A curated swatch book exhibition showcasing textiles and fabric samples. Guests explore swatches while wearing gloves — creating a premium, museum-like interaction that emphasises the value and delicacy of the fabrics. In collaboration with Chanakya International, whose mastery of embroidery is world-renowned.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="kolhapuri">
+    <img src="imgs/kolhapuri.jpg" alt="Kolhapuri Chappals">
+    <div class="stall-body"><span class="stall-tag t-touch">Touch · Zone 01</span><h3>Kolhapuri Chappals</h3><p>One of India's most well-preserved forms of craftsmanship. The exhibit explores the striking similarities between Italian leather craftsmanship and the handmade leather techniques of Kolhapuri chappals — a dialogue between two great artisanal traditions celebrating shared appreciation for quality, heritage, and timeless craft.</p></div>
+  </div>
+  <div class="stall-card fa" id="rugs">
+    <img src="imgs/rugs.jpg" alt="Indian rugs as art">
+    <div class="stall-body"><span class="stall-tag t-touch">Touch · Zone 01</span><h3>Rugs as Art</h3><p>India is equally rich in its heritage of rugs, weaving traditions, and intricate patterns. The exhibit highlights artistry and history behind Indian rugs — the stories, cultural significance, and historical evolution, alongside the musical instruments played while sitting on these carpets, showcasing the essence of humility, togetherness, and respect.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="block">
+    <img src="imgs/blocks.jfif" alt="Block printing workshop">
+    <div class="stall-body"><span class="stall-tag t-touch">Touch · Zone 01</span><h3>Block Printing Workshop</h3><p>The artisan demonstrates the "thump" — the specific physical force needed to transfer pigment perfectly. A sensory experience: smell the pigment, hear the block hitting the table, and see the visual reveal of the pattern. A long roll of fabric where every participant adds one "stamp" — by the end, a community textile representing the collective energy of the event.</p></div>
+  </div>
+  <div class="stall-card fa d2" id="bandana">
+    <img src="imgs/bandana.jpg" alt="Upcycled bandana shop">
+    <div class="stall-body"><span class="stall-tag t-touch">Touch · Zone 01</span><h3>Upcycled Bandana Shop</h3><p>Sustainable fashion activity using recycled saree fabrics. Visitors can pick fabric pieces and style them as bandanas, bag accessories, scarves, or wrist ties — promoting creativity, individuality, and textile upcycling, while highlighting the beauty of Indian prints, embroidery, and craftsmanship in a modern way.</p></div>
+  </div>
+</div>
+
+<!-- SMELL -->
+<div class="zone-header" id="smell"><h2><span class="zh-num">Zone 02 — Smell</span>👃 AROMA &amp; MEMORY</h2></div>
+<div class="stall-grid">
+  <div class="stall-card wide fa" id="masala">
+    <img src="imgs/masala.jpg" alt="The Masala Story spices">
+    <div class="stall-body"><span class="stall-tag t-smell">Smell · Zone 02</span><h3>The Masala Story</h3><p>Imagine walking into a space and being stopped not by a banner or a screen — but by the smell of freshly brewed chai and the rich aroma of Indian spices. A masala table loaded with spices from across India where visitors can see, touch, and smell ingredients that have been at the heart of Indian cooking for centuries. Two senses, one stall, and the whole story of India in a single stop.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="itra">
+    <img src="imgs/itra.jpg" alt="Itra perfume stall">
+    <div class="stall-body"><span class="stall-tag t-smell">Smell · Zone 02</span><h3>Itra Stall — Scent Library</h3><p>This stall transports the audience to the 17th-century Mughal courts, where fragrance was a symbol of power, spirituality, and poetic refinement. A Scent Library where guests can explore the deep, evolving notes of Oud, Sandalwood, and the legendary Rooh Gulab. The "Slow" Perfume: unlike modern sprays that evaporate, Itra is oil-based and melts into the skin.</p></div>
+  </div>
+  <div class="stall-card fa" id="dhoop">
+    <div class="stall-ph" style="background:#1A3A20">🕯️</div>
+    <div class="stall-body"><span class="stall-tag t-smell">Smell · Zone 02</span><h3>Dhoop Bathi — Incense Exhibit</h3><p>A collaborative exhibit with sustainable Indian incense brands, showcasing the rich heritage, craftsmanship, and cultural significance of incense in Indian life. The installation explores how incense has been deeply woven into Indian culture for generations — playing an important role in rituals, spirituality, meditation, celebrations, and everyday life.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="freshener">
+    <div class="stall-ph" style="background:#2D1800">🌿</div>
+    <div class="stall-body"><span class="stall-tag t-smell">Smell · Zone 02</span><h3>Mouth Freshener Stall</h3><p>Mouth fresheners are an essential part of Indian food culture, traditionally enjoyed after meals to cleanse the palate and aid digestion. From sweet blends to spiced masala mixes, visitors can sample and experience a variety of traditional mouth fresheners — reflecting the familiar Indian habit of casually chewing on flavorful blends while socialising on busy streets and markets.</p></div>
+  </div>
+</div>
+
+<!-- SIGHT -->
+<div class="zone-header" id="sight"><h2><span class="zh-num">Zone 03 — Sight</span>👁 VISUAL CULTURE &amp; IDENTITY</h2></div>
+<div class="stall-grid">
+  <div class="stall-card fa" id="movie">
+    <img src="imgs/movie.jpg" alt="Movie Room Indian cinema">
+    <div class="stall-body"><span class="stall-tag t-sight">Sight · Zone 03</span><h3>Movie Room</h3><p>India's richness extends far beyond culture and textiles — cinema also plays a deeply significant role in shaping the country's identity. Iconic and influential films that transformed Indian cinema — not only within the country but globally. Each narrative reflects fragments of everyday Indian life, creating a strong connection between cinema, culture, and lived experiences.</p></div>
+  </div>
+  <div class="stall-card wide fa d1" id="rangoli">
+    <img src="imgs/rangoli.jfif" alt="Rangoli Wall community art">
+    <div class="stall-body"><span class="stall-tag t-sight">Sight · Zone 03</span><h3>Rangoli Wall — You Complete It</h3><p>A giant half-finished Rangoli wall — and every visitor gets a set of stickers to complete it! Rangoli is one of India's most beautiful and colourful traditions, and instead of just looking at it, people get to be part of it. Every visitor adds their piece, every sticker tells a story, and by the end of the exhibition the wall becomes a masterpiece made by hundreds of hands together.</p></div>
+  </div>
+  <div class="stall-card fa" id="pottery">
+    <img src="imgs/pottery.jfif" alt="Pottery live demonstration">
+    <div class="stall-body"><span class="stall-tag t-sight">Sight · Zone 03</span><h3>Pottery Live Demonstration</h3><p>Unlike a static shop, this is a performance-led stall. The artisan doesn't just sell an object — they sell the "birth" of a story. Every brushstroke applied live to the clay acts as a bridge between the soil of India and the eyes of Milan. Pots of varying scales, from tiny kulhads to massive matkas, clustered together create a rhythmic, undulating landscape of clay.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="calligraphy">
+    <img src="imgs/calligraphy.jpg" alt="Indian calligraphy and scripts">
+    <div class="stall-body"><span class="stall-tag t-sight">Sight · Zone 03</span><h3>Calligraphy &amp; Languages</h3><p>A creative space celebrating Indian scripts and typography. Visitors can write their names or favourite words using stencils or with the help of a professional calligrapher. Showcases the beauty of Indian languages and handwritten art forms that span millennia of literary and artistic tradition.</p></div>
+  </div>
+  <div class="stall-card fa d2" id="jewellery">
+    <img src="imgs/zumka.jfif" alt="Indian jewellery collection">
+    <div class="stall-body"><span class="stall-tag t-sight">Sight · Zone 03</span><h3>Indian Jewellery</h3><p>A curated collection of traditional and contemporary Indian jewellery pieces. Includes styles inspired by different regions of India — jhumkas, bangles, anklets, nose rings, and layered necklaces. Visitors can explore Indian craftsmanship, colours, and ornamentation culture in a vibrant and festive shopping experience.</p></div>
+  </div>
+</div>
+
+<!-- TASTE -->
+<div class="zone-header" id="taste"><h2><span class="zh-num">Zone 04 — Taste</span>🍵 STREET &amp; RITUAL CONSUMPTION</h2></div>
+<div class="stall-grid">
+  <div class="stall-card wide fa" id="chai">
+    <img src="imgs/Chai.jfif" alt="Chai tea stall India">
+    <div class="stall-body"><span class="stall-tag t-taste">Taste · Zone 04</span><h3>Chai Tea Stall</h3><p>India has one of the richest tea cultures in the world and this stall brings that experience directly to people in a personal, approachable way. Free samples naturally draw crowds. A warm cup of tea is a conversation starter, and every visitor who tries one leaves with a positive memory. We turn foot traffic into genuine engagement — not just people walking past, but people stopping, sipping, and listening.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="coffee">
+    <img src="imgs/coffee.jpg" alt="South Indian filter coffee">
+    <div class="stall-body"><span class="stall-tag t-taste">Taste · Zone 04</span><h3>Filter Coffee</h3><p>The legendary South Indian filter coffee — known for its bold, rich flavour and the iconic way it is poured from a steel tumbler to a davara. Filter coffee is not just a drink — it is a ritual, a tradition, a piece of culture that millions of people in South India wake up to every single morning.</p></div>
+  </div>
+  <div class="stall-card fa" id="papad">
+    <img src="imgs/papad.jpg" alt="Papad stall India">
+    <div class="stall-body"><span class="stall-tag t-taste">Taste · Zone 04</span><h3>Papad Stall</h3><p>In India, making papad is a communal summer ritual for women. This stall honours "Grandmother's Geometry" — the precision of laying out perfect circles of dough to bake under the sun. The palette: shades of ochre, turmeric yellow, terracotta, and translucent burnt orange. The feel: organic, artisanal, and slow-made.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="food">
+    <img src="imgs/food_court.jpg" alt="Food court Indian cuisine">
+    <div class="stall-body"><span class="stall-tag t-taste">Taste · Zone 04</span><h3>Food Court — Taste of India</h3><p>A street-food style area with regional stalls covering North, South, East, and West Indian cuisines. Includes a Masala Chai corner and traditional Indian sweets. All operators hold valid food permits, and eco-friendly packaging is required throughout.</p></div>
+  </div>
+</div>
+
+<!-- ACTION -->
+<div class="zone-header" id="action"><h2><span class="zh-num">Zone 05 — Action</span>✋ PARTICIPATION &amp; CREATION</h2></div>
+<div class="stall-grid">
+  <div class="stall-card wide fa" id="puppet">
+    <div class="stall-ph wide" style="background:#3A2000;height:270px">🪆</div>
+    <div class="stall-body"><span class="stall-tag t-action">Action · Zone 05</span><h3>Jaipur Puppet Workshop — The Storytellers</h3><p>An interactive workshop celebrating Indian fashion and craftsmanship through creative, hands-on activities. Using leftover katrans (fabric scraps) as the base material for doll clothing, the workshop also highlights the importance of sustainability and mindful reuse. The dolls will remain in their original form, while participants can personalize the faces and add detailing of their choice — each piece unique. Customized dolls can then be taken home as meaningful souvenirs.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="saree">
+    <img src="imgs/saree.jfif" alt="Saree draping cultural station">
+    <div class="stall-body"><span class="stall-tag t-action">Action · Zone 05</span><h3>Saree Draping Station</h3><p>A cultural styling station where visitors can try wearing a saree — six yards of elegance. Different draping styles demonstrated for a fun and interactive experience. Includes a photo corner for capturing memories in traditional Indian attire. A garment with no zippers or buttons, only the grace of the person wearing it.</p></div>
+  </div>
+  <div class="stall-card fa" id="bindi">
+    <img src="imgs/bindi.jpg" alt="Bindi and temporary tattoo">
+    <div class="stall-body"><span class="stall-tag t-action">Action · Zone 05</span><h3>Bindi &amp; Temporary Tattoo</h3><p>Interactive beauty station inspired by Indian festive makeup traditions. Visitors can choose from a variety of bindis in different shapes, colours, and designs. Small hand-painted Indian motifs around the eyes, brows, and forehead inspired by henna and traditional art. Encourages playful self-expression and cultural exploration.</p></div>
+  </div>
+  <div class="stall-card fa d1" id="gilli">
+    <img src="imgs/gilli.jpg" alt="Gilli Danda Indian street game">
+    <div class="stall-body"><span class="stall-tag t-action">Action · Zone 05</span><h3>Gilli Danda Corner</h3><p>Bringing back Gilli Danda — we are creating a live corner where kids can put down their phones and pick up a danda! One of India's oldest street games, played in lanes and fields for hundreds of years — most children today have never even seen it. While their parents enjoy chai, coffee, and spices right next door. Pure joy, pure India.</p></div>
+  </div>
+  <div class="stall-card fa d2" id="ayurveda">
+    <img src="imgs/ayurveda.jpg" alt="Ayurvedic products India">
+    <div class="stall-body"><span class="stall-tag t-action">Action · Zone 05</span><h3>Ayurvedic Products</h3><p>A dedicated space showcasing traditional Indian beauty rituals and Ayurvedic self-care. Display of herbal oils, natural ingredients, skincare, and haircare products. Interactive experience where visitors can explore ingredients like amla, neem, hibiscus, sandalwood, and turmeric. Promotes wellness, sustainability, and India's rich heritage in natural beauty care.</p></div>
+  </div>
+</div>
+
+<!-- PAANWADI SPECIAL -->
+<section class="paan-special" id="paan">
+  <div class="fa">
+    <div style="font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#EE00CC;margin-bottom:1.4rem">Special Installation · The Neon Betel</div>
+    <h2 style="font-family:'Bebas Neue';font-size:clamp(3rem,6vw,7rem);line-height:.88;color:#fff;margin-bottom:1.5rem">PAANWADI<br><span style="color:#EE00CC">AESTHETIC</span></h2>
+    <p style="color:rgba(255,255,255,.6);font-size:1rem;line-height:1.85;max-width:460px">Stepping into a technicolor time capsule where the street corner meets the gallery. "The Neon Betel" is an immersive installation that reimagines the iconic Indian Paan Wadi through the lens of Indian Kitsch and Maximalism. We are bringing this <em style="color:#fff">"organized chaos"</em> to Milan — stripping away the mundane and amplifying the extraordinary.</p>
+  </div>
+  <div class="fa d1" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div style="padding:2rem;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:1.9rem;text-align:center;line-height:1.05;background:#EE00CC;color:#0C0015">INDIAN<br>KITSCH</div>
+    <div style="padding:2rem;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:1.9rem;text-align:center;line-height:1.05;background:#39FF14;color:#0C0015">MAXI<br>MALISM</div>
+    <div style="padding:2rem;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:3rem;background:#FFE600">🌿</div>
+    <div style="padding:2rem;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:1.9rem;text-align:center;line-height:1.05;background:#FF4500;color:#fff">NEON<br>BETEL</div>
+  </div>
+</section>
+
+<!-- MAIN STAGE -->
+<section style="background:var(--forest);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center">
+  <div class="fa"><img src="imgs/main_stage.jpg" alt="Main stage Kathak dance" style="width:100%;height:480px;object-fit:cover;display:block"></div>
+  <div class="fa d1">
+    <div class="sec-label" style="color:var(--saffron)">Grand Opening · Main Stage</div>
+    <h2 style="font-family:'Bebas Neue';font-size:clamp(3rem,6vw,7rem);line-height:.88;color:var(--cream);margin-bottom:1.5rem">KATHAK.<br>BOLLYWOOD.<br>SITAR.</h2>
+    <p style="color:rgba(246,237,216,.65);font-size:1rem;line-height:1.85;margin-bottom:2rem">The centrepiece of the event. A formal opening ceremony featuring the Consul General of India and a Comune di Milano representative — followed by classical Kathak and Bharatanatyam dance, a professional Bollywood medley troupe, and a live Sitar &amp; fusion music ensemble.</p>
+    <a href="visit.html" class="btn btn-outline btn-light">Plan Your Visit →</a>
+  </div>
+</section>
+
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <span class="logo">✦ INTRECCIO RASA</span>
+      <p>With Love From India. A one-day cultural exhibition of art, dance, craft and heritage — celebrating the richness of Indian civilisation in the heart of Milan, 10 July 2026.</p>
+    </div>
+    <div class="ft-col"><h4>Experience</h4><ul>
+      <li><a href="experience.html">The 5 Senses</a></li>
+      <li><a href="stalls.html">All Stalls</a></li>
+      <li><a href="stalls.html#touch">Craft Collective</a></li>
+      <li><a href="stalls.html#taste">Sensory Street</a></li>
+      <li><a href="stalls.html#action">Workshops</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Visit</h4><ul>
+      <li><a href="visit.html">Event Info</a></li>
+      <li><a href="visit.html#venue">Location</a></li>
+      <li><a href="visit.html#passport">The Passport</a></li>
+      <li><a href="visit.html#faq">FAQ</a></li>
+      <li><a href="contact.html">Press Kit</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Connect</h4><ul>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html#partner">Partnerships</a></li>
+      <li><a href="contact.html#volunteer">Volunteer</a></li>
+      <li><a href="about.html">Our Story</a></li>
+    </ul></div>
+  </div>
+  <div class="ft-btm">
+    <span>© 2026 Intreccio Rasa. With Love From India.</span>
+    <span>Milan, Italy · 10 July 2026</span>
+  </div>
+</footer>
+
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>60)});
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.08});
+document.querySelectorAll('.fa').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Intreccio Rasa Hero Background</title>
+  <desc id="desc">Warm abstract background inspired by craft, textiles, and festival color themes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B3A28"/>
+      <stop offset="45%" stop-color="#8A3E1F"/>
+      <stop offset="100%" stop-color="#D4842A"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="25%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#F5A200" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#F5A200" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="80%" cy="70%" r="45%">
+      <stop offset="0%" stop-color="#C8572F" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#C8572F" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="weave" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M0 24H48M24 0V48" stroke="#FAF3E2" stroke-opacity="0.08" stroke-width="1"/>
+      <path d="M0 0L48 48M48 0L0 48" stroke="#FAF3E2" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#weave)"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+
+  <g opacity="0.28" fill="none" stroke="#FAF3E2" stroke-width="2">
+    <path d="M140 760 C320 560, 510 840, 700 650 S1090 520, 1360 700"/>
+    <path d="M90 690 C280 510, 500 760, 760 600 S1120 500, 1450 640"/>
+    <path d="M220 820 C430 640, 610 900, 860 740 S1180 640, 1500 780"/>
+  </g>
+</svg>

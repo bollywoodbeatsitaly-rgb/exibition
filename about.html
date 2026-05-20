@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About · Intreccio Rasa Milan 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--cream:#F6EDD8;--dark:#120902;--terra:#C8572F;--saffron:#F5A200;--ochre:#D4842A;--forest:#1B3A28;--red:#D43420;--cream2:#FAF3E2;--text:#1A0D05}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:1.4rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:background .3s,border .3s}
+nav.scrolled{background:rgba(246,237,216,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08)}
+nav.nav-dark-hero:not(.scrolled) .nav-logo,
+nav.nav-dark-hero:not(.scrolled) .nav-links a{color:var(--cream)}
+nav.nav-dark-hero:not(.scrolled) .nav-links a:hover,
+nav.nav-dark-hero:not(.scrolled) .nav-links a.active{color:var(--saffron)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;letter-spacing:.12em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:.5rem}
+.nav-logo .star{color:var(--terra);font-size:1.3rem;line-height:1}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--text);font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--terra)}
+.nav-btn{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;background:var(--terra);color:#fff;padding:.6rem 1.5rem;text-decoration:none;font-weight:600;transition:background .2s}
+.nav-btn:hover{background:var(--red)}
+.marquee{background:var(--terra);padding:1rem 0;overflow:hidden;white-space:nowrap}
+.mq-track{display:inline-flex;animation:mq 28s linear infinite}
+.mq-item{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--cream);letter-spacing:.1em;padding:0 1.5rem}
+.mq-dot{color:var(--saffron);padding:0 .5rem}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sec-label{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--saffron);display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.sec-label::before{content:'';display:block;width:36px;height:1px;background:var(--saffron)}
+.sec-label.center{justify-content:center}.sec-label.center::before{display:none}
+.fa{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fa.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:1.1rem 2.2rem;font-family:'Jost',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:all .25s}
+.btn-terra{background:var(--terra);color:#fff}.btn-terra:hover{background:var(--red)}
+.btn-outline{background:transparent;border:2px solid currentColor}.btn-dark{color:var(--dark)}.btn-light{color:var(--cream)}
+.btn-outline.btn-dark:hover{background:var(--dark);color:var(--cream)}
+.btn-outline.btn-light:hover{background:var(--cream);color:var(--terra)}
+.page-hero{background:var(--dark);padding:12rem 4rem 7rem;position:relative;overflow:hidden}
+.page-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.18}
+.page-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,9vw,10rem);line-height:.88;color:var(--cream);position:relative;z-index:1}
+.page-hero h1 span{color:var(--saffron)}
+.page-hero p{color:rgba(246,237,216,.65);font-size:1.05rem;line-height:1.85;max-width:600px;margin-top:1.5rem;position:relative;z-index:1}
+footer{background:var(--dark);padding:5rem 4rem 3rem}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:3.5rem}
+.ft-brand .logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--cream);letter-spacing:.12em;margin-bottom:.9rem;display:block}
+.ft-brand p{color:rgba(246,237,216,.45);font-size:.82rem;line-height:1.75;max-width:270px}
+.ft-col h4{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron);margin-bottom:1.4rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{margin-bottom:.7rem}
+.ft-col ul li a{color:rgba(246,237,216,.5);text-decoration:none;font-size:.88rem;transition:color .2s}
+.ft-col ul li a:hover{color:var(--cream)}
+.ft-btm{display:flex;justify-content:space-between;align-items:center;color:rgba(246,237,216,.3);font-size:.75rem}
+
+.timeline{padding:7rem 4rem;background:var(--dark)}
+.tl-hdr{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;margin-bottom:5rem}
+.tl-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,8vw,9rem);line-height:.88;color:var(--cream)}
+.tl-hdr h2 span{color:var(--saffron)}
+.tl-hdr p{color:rgba(246,237,216,.7);font-size:1rem;line-height:1.85;margin-bottom:1.2rem}
+.concepts{background:var(--cream2);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.concept-img{width:100%;height:500px;object-fit:cover;display:block}
+.concept-text h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,6.5rem);line-height:.88;color:var(--text);margin-bottom:1.5rem}
+.concept-text h2 em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra)}
+.concept-text p{color:rgba(26,13,5,.7);font-size:1rem;line-height:1.85;margin-bottom:1.2rem}
+.collab{background:var(--dark);padding:7rem 4rem}
+.collab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.collab-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:2rem}
+.collab-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--cream);margin-bottom:.8rem}
+.collab-card p{color:rgba(246,237,216,.55);font-size:.85rem;line-height:1.7}
+.collab-card .tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);margin-bottom:.8rem;display:block}
+.vision{background:var(--terra);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+.vision h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,8rem);line-height:.88;color:var(--cream);margin-bottom:1.5rem}
+.vision p{color:rgba(246,237,216,.85);font-size:1rem;line-height:1.85}
+.vision-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.vstat{border-top:1px solid rgba(246,237,216,.2);padding-top:1.2rem}
+.vstat .num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--cream);line-height:1}
+.vstat .lbl{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,237,216,.6)}
+.img-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.img-strip img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .4s}
+.img-strip img:hover{transform:scale(1.03)}
+</style>
+</head>
+<body>
+
+<nav id="nav" class="nav-dark-hero">
+  <a href="index.html" class="nav-logo"><span class="star">✦</span> INTRECCIO RASA</a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="experience.html" class="">Experience</a></li>
+    <li><a href="stalls.html" class="">Stalls</a></li>
+    <li><a href="visit.html" class="">Visit</a></li>
+    <li><a href="contact.html" class="">Contact</a></li>
+  </ul>
+  <a href="visit.html" class="nav-btn">Free Entry →</a>
+</nav>
+
+
+<section class="page-hero">
+  <img class="page-hero-img" src="imgs/hero_market.jpg" alt="Indian Market">
+  <div class="fa"><div class="sec-label">Our Story</div>
+  <h1>ABOUT<br><span>INTRECCIO</span><br>RASA</h1>
+  <p>A one-day multicultural exhibition celebrating the richness of Indian civilisation — where culture becomes emotion and observation becomes immersion.</p></div>
+</section>
+
+<div class="marquee"><div class="mq-track">
+<span class="mq-item">WITH LOVE FROM INDIA</span><span class="mq-dot">✦</span>
+<span class="mq-item">MILAN 2026</span><span class="mq-dot">✦</span>
+<span class="mq-item">10 LUGLIO</span><span class="mq-dot">✦</span>
+<span class="mq-item">INTRECCIO RASA</span><span class="mq-dot">✦</span>
+<span class="mq-item">FREE ENTRY</span><span class="mq-dot">✦</span>
+<span class="mq-item">ART · CRAFT · HERITAGE</span><span class="mq-dot">✦</span>
+<span class="mq-item">WITH LOVE FROM INDIA</span><span class="mq-dot">✦</span>
+<span class="mq-item">MILAN 2026</span><span class="mq-dot">✦</span>
+<span class="mq-item">10 LUGLIO</span><span class="mq-dot">✦</span>
+<span class="mq-item">INTRECCIO RASA</span><span class="mq-dot">✦</span>
+<span class="mq-item">FREE ENTRY</span><span class="mq-dot">✦</span>
+<span class="mq-item">ART · CRAFT · HERITAGE</span><span class="mq-dot">✦</span>
+</div></div>
+
+<section class="timeline">
+  <div class="tl-hdr">
+    <div class="fa">
+      <div class="sec-label">The Name & Vision</div>
+      <h2>WHERE TWO<br>WORLDS<br><span>INTERWEAVE</span></h2>
+    </div>
+    <div class="fa d1">
+      <p>Born from the fusion of <em style="color:var(--saffron);font-style:italic">"intreccio"</em> — Italian for intertwining — and <em style="color:var(--saffron);font-style:italic">"rasa"</em> — Sanskrit for emotion, essence, and aesthetic experience — Intreccio Rasa becomes a space where cultures, senses, and stories are woven together.</p>
+      <p>It represents interwoven emotions and lived experiences — where India is not presented as an object to observe, but as a world to enter, feel, and move through.</p>
+      <p>The storyline follows the rhythm of an ordinary Indian day, transforming familiar moments into immersive cultural experiences. As visitors move through the space, they step into fragments of daily life that together weave a larger narrative of identity, craftsmanship, memory, and connection.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+    <div class="fa" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:2.5rem">
+      <div style="font-size:2rem;margin-bottom:1rem">🤝</div>
+      <h3 style="font-family:'Bebas Neue';font-size:1.8rem;color:var(--cream);margin-bottom:.8rem">India Meets Italy</h3>
+      <p style="color:rgba(246,237,216,.55);font-size:.85rem;line-height:1.7">A live dialogue between Indian culture and Milan's design community. Two civilisations with shared appreciation for craftsmanship, heritage, and lived beauty.</p>
+    </div>
+    <div class="fa d1" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:2.5rem">
+      <div style="font-size:2rem;margin-bottom:1rem">🌿</div>
+      <h3 style="font-family:'Bebas Neue';font-size:1.8rem;color:var(--cream);margin-bottom:.8rem">Beyond Stereotypes</h3>
+      <p style="color:rgba(246,237,216,.55);font-size:.85rem;line-height:1.7">India presented not through clichés, but through the intimate, everyday rituals that continue to shape its identity — the true essence of a living civilisation.</p>
+    </div>
+    <div class="fa d2" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:2.5rem">
+      <div style="font-size:2rem;margin-bottom:1rem">✨</div>
+      <h3 style="font-family:'Bebas Neue';font-size:1.8rem;color:var(--cream);margin-bottom:.8rem">All Are Welcome</h3>
+      <p style="color:rgba(246,237,216,.55);font-size:.85rem;line-height:1.7">Free public entry, open to Milanese citizens, the Italian public, and the 50,000+ Indian diaspora in Lombardy. Civic patronage positions Milan as a truly inclusive global hub.</p>
+    </div>
+  </div>
+</section>
+<section class="concepts">
+  <div class="fa"><img class="concept-img" src="imgs/hero_market.jpg" alt="Indian market bazaar" style="object-position:center"></div>
+  <div class="concept-text fa d1">
+    <div class="sec-label" style="color:var(--terra)">The Concept</div>
+    <h2>AN <em>ORDINARY</em><br>DAY IN<br>INDIA</h2>
+    <p>The journey begins with touch — textiles, handcrafted rugs, fabric swatches, and the artistry of Indian craftsmanship preserved through generations. Visitors experience the richness of Indian materials and the dialogue between Indian and Italian craftsmanship.</p>
+    <p>As the experience unfolds, scent becomes a storyteller. Incense, natural aromas, spices, and mouth fresheners recreate the sensory landscape of Indian homes, temples, streets, and gatherings.</p>
+    <p>Cinema becomes the emotional bridge — showcasing stories that shaped Indian society. Interactive spaces invite visitors to become part of the narrative: customizing dolls from sustainable scraps, sampling traditional flavours, experiencing installations that reflect the movement and vibrancy of Indian streets.</p>
+    <p>At its heart, Intreccio Rasa is about connection — between people and traditions, memory and modernity, India and Italy.</p>
+  </div>
+</section>
+<div class="img-strip fa">
+  <img src="imgs/pottery.jfif" alt="Pottery artisan">
+  <img src="imgs/blocks.jfif" alt="Block printing">
+  <img src="imgs/zumka.jfif" alt="Indian jewellery">
+  <img src="imgs/saree.jpg" alt="Saree draping">
+</div>
+<section class="collab">
+  <div class="fa"><div class="sec-label">Collaborations &amp; Partners</div>
+  <h2 style="font-family:'Bebas Neue';font-size:clamp(3rem,6vw,7rem);line-height:.88;color:var(--cream);margin-bottom:.5rem">CRAFTED<br>TOGETHER</h2></div>
+  <div class="collab-grid">
+    <div class="collab-card fa">
+      <span class="tag">Craft Partner</span>
+      <h3>Chanakya International</h3>
+      <p>A premier embroidery and textile house — collaborating on the swatch book exhibition. Guests explore exquisite textile swatches wearing gloves, creating a museum-like interaction that honours the value and delicacy of Indian craftsmanship.</p>
+    </div>
+    <div class="collab-card fa d1">
+      <span class="tag">Civic Support</span>
+      <h3>Comune di Milano</h3>
+      <p>The event seeks civic patronage from the Comune di Milano, positioning the city as a truly inclusive global hub — celebrating the Indian diaspora of 50,000+ and welcoming all Milanese citizens to experience a culture beyond stereotypes.</p>
+    </div>
+    <div class="collab-card fa d2">
+      <span class="tag">Diplomatic</span>
+      <h3>Consul General of India</h3>
+      <p>The grand opening ceremony will feature the Consul General of India alongside a Comune di Milano representative — marking the event as a significant cultural bridge between India and Italy at the highest diplomatic level.</p>
+    </div>
+  </div>
+</section>
+<section class="vision">
+  <div class="fa">
+    <div class="sec-label" style="color:rgba(246,237,216,.6)">The Numbers</div>
+    <h2>A DAY<br>THAT<br>MATTERS</h2>
+    <p>One day. One city. One extraordinary encounter between two great civilisations. A free public exhibition that turns ordinary cultural practices into layered narratives — revealing the true essence of India.</p>
+    <br><a href="visit.html" class="btn" style="background:var(--cream);color:var(--terra);margin-top:1rem">Plan Your Visit →</a>
+  </div>
+  <div class="vision-stats fa d1">
+    <div class="vstat"><div class="num">10</div><div class="lbl">July 2026<br>One Day Only</div></div>
+    <div class="vstat"><div class="num">5K</div><div class="lbl">Expected<br>Visitors</div></div>
+    <div class="vstat"><div class="num">25+</div><div class="lbl">Immersive<br>Stalls</div></div>
+    <div class="vstat"><div class="num">5</div><div class="lbl">Sensory<br>Zones</div></div>
+    <div class="vstat"><div class="num">FREE</div><div class="lbl">Public<br>Admission</div></div>
+    <div class="vstat"><div class="num">50K</div><div class="lbl">Indian Diaspora<br>in Lombardy</div></div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <span class="logo">✦ INTRECCIO RASA</span>
+      <p>With Love From India. A one-day cultural exhibition of art, dance, craft and heritage — celebrating the richness of Indian civilisation in the heart of Milan, 10 July 2026.</p>
+    </div>
+    <div class="ft-col"><h4>Experience</h4><ul>
+      <li><a href="experience.html">The 5 Senses</a></li>
+      <li><a href="stalls.html">All Stalls</a></li>
+      <li><a href="stalls.html#touch">Craft Collective</a></li>
+      <li><a href="stalls.html#taste">Sensory Street</a></li>
+      <li><a href="stalls.html#action">Workshops</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Visit</h4><ul>
+      <li><a href="visit.html">Event Info</a></li>
+      <li><a href="visit.html#venue">Location</a></li>
+      <li><a href="visit.html#passport">The Passport</a></li>
+      <li><a href="visit.html#faq">FAQ</a></li>
+      <li><a href="contact.html">Press Kit</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Connect</h4><ul>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html#partner">Partnerships</a></li>
+      <li><a href="contact.html#volunteer">Volunteer</a></li>
+      <li><a href="about.html">Our Story</a></li>
+    </ul></div>
+  </div>
+  <div class="ft-btm">
+    <span>© 2026 Intreccio Rasa. With Love From India.</span>
+    <span>Milan, Italy · 10 July 2026</span>
+  </div>
+</footer>
+
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>60)});
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.08});
+document.querySelectorAll('.fa').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
+
+
+
+
+

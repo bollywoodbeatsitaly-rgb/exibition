@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intreccio Rasa — With Love From India · Milan 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --cream:#F6EDD8;
+  --dark:#120902;
+  --terra:#C8572F;
+  --saffron:#F5A200;
+  --ochre:#D4842A;
+  --forest:#1B3A28;
+  --red:#D43420;
+  --cream2:#FAF3E2;
+  --text:#1A0D05;
+}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:1.4rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:background .3s,border .3s}
+nav.scrolled{background:rgba(246,237,216,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08)}
+nav.nav-dark-hero:not(.scrolled) .nav-logo,
+
+nav.nav-dark-hero:not(.scrolled) .nav-links a:hover,
+nav.nav-dark-hero:not(.scrolled) .nav-links a.active{color:var(--saffron)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;letter-spacing:.12em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:.5rem}
+.nav-logo .star{color:var(--terra);font-size:1.3rem;line-height:1}
+.nav-links{display:flex;gap:2.4rem;list-style:none}
+.nav-links a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--text);font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--terra)}
+.nav-btn{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;background:var(--terra);color:#fff;padding:.6rem 1.5rem;text-decoration:none;font-weight:600;transition:background .2s}
+.nav-btn:hover{background:var(--red)}
+/* HERO */
+.hero{position:relative;min-height:100vh;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:7rem 2rem 5rem}
+.hero-bigtype{font-family:'Bebas Neue',sans-serif;font-size:clamp(90px,16vw,260px);line-height:.85;text-align:center;position:relative;z-index:2;pointer-events:none;user-select:none;letter-spacing:.02em}
+.hero-bigtype .l1{display:block;color:var(--text)}
+.hero-bigtype .l2{display:block;color:transparent;-webkit-text-stroke:2.5px var(--text)}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.8vw,1.35rem);letter-spacing:.35em;text-transform:uppercase;color:var(--terra);margin-top:1.4rem;position:relative;z-index:2;font-style:italic}
+.hero-meta{display:flex;gap:4rem;margin-top:3rem;position:relative;z-index:2}
+.hm{text-align:center}
+.hm .lbl{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:.3rem}
+.hm .val{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600}
+/* floating images */
+.fi{position:absolute;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.18);z-index:1}
+.fi img{width:100%;height:100%;object-fit:cover;display:block}
+.fi .fc{position:absolute;bottom:0;left:0;right:0;background:rgba(246,237,216,.9);padding:.28rem .6rem;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}
+.fi-1{width:175px;height:215px;top:13%;left:2%;transform:rotate(-5deg);animation:fl1 7s ease-in-out infinite}
+.fi-2{width:155px;height:185px;top:6%;right:6%;transform:rotate(4deg);animation:fl2 8s ease-in-out infinite}
+.fi-3{width:160px;height:200px;top:52%;left:4%;transform:rotate(3deg);animation:fl3 6s ease-in-out infinite}
+.fi-4{width:195px;height:148px;top:16%;right:19%;transform:rotate(-3deg);animation:fl1 9s ease-in-out infinite}
+.fi-5{width:145px;height:175px;bottom:12%;right:4%;transform:rotate(6deg);animation:fl2 7.5s ease-in-out infinite}
+.fi-6{width:130px;height:155px;bottom:18%;left:17%;transform:rotate(-4deg);animation:fl3 8.5s ease-in-out infinite}
+.fi-7{width:165px;height:125px;top:58%;right:18%;transform:rotate(2deg);animation:fl1 6.5s ease-in-out infinite}
+@keyframes fl1{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-12px)}}
+@keyframes fl2{0%,100%{transform:rotate(4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-10px)}}
+@keyframes fl3{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-14px)}}
+.badge-wrap{position:absolute;top:18%;right:4%;width:115px;height:115px;z-index:3}
+.badge-wrap svg{width:100%;height:100%;animation:spin 16s linear infinite}
+.badge-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.scroll-pill{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;width:64px;height:64px;border:1.5px solid var(--text);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;animation:bob 2.2s ease-in-out infinite}
+.scroll-pill span{font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;line-height:1.2;text-align:center}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+/* MARQUEE */
+.marquee{background:var(--terra);padding:1.25rem 0;overflow:hidden;white-space:nowrap}
+.mq-track{display:inline-flex;animation:mq 28s linear infinite}
+.mq-item{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--cream);letter-spacing:.1em;padding:0 1.5rem}
+.mq-dot{color:var(--saffron);padding:0 .5rem}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ABOUT */
+.about{background:var(--dark);padding:9rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+.sec-label{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--saffron);display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.sec-label::before{content:'';display:block;width:36px;height:1px;background:var(--saffron)}
+.about-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,6.5vw,7.5rem);line-height:.88;color:var(--cream)}
+.about-h em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--saffron)}
+.about-r{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-style:italic;color:#fff;border-left:3px solid var(--terra);padding-left:1.5rem;margin-bottom:1.8rem;line-height:1.55}
+.about-r~p{color:#fff;font-size:1rem;line-height:1.85;margin-bottom:1.4rem}
+.about-r .note{color:var(--saffron);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin-top:2rem}
+/* SENSES */
+.senses{padding:7rem 4rem;background:var(--cream2)}
+.senses-hdr{text-align:center;margin-bottom:3.5rem}
+.senses-hdr .sec-label{justify-content:center}
+.senses-hdr .sec-label::before{display:none}
+.senses-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,9rem);color:var(--text);line-height:.88}
+.s-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem}
+.s-card{padding:2.5rem 1.5rem;cursor:pointer;transition:transform .3s}
+.s-card:hover{transform:translateY(-7px)}
+.s-card:nth-child(1){background:var(--text);color:var(--cream)}
+.s-card:nth-child(2){background:var(--terra);color:var(--cream)}
+.s-card:nth-child(3){background:var(--forest);color:var(--cream)}
+.s-card:nth-child(4){background:var(--ochre);color:var(--cream)}
+.s-card:nth-child(5){background:var(--saffron);color:var(--dark)}
+.s-icon{font-size:2.4rem;margin-bottom:1rem;display:block}
+.s-num{font-size:.62rem;letter-spacing:.22em;opacity:.55;margin-bottom:.4rem;text-transform:uppercase}
+.s-title{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;line-height:1;margin-bottom:.9rem}
+.s-desc{font-size:.82rem;opacity:.8;line-height:1.65}
+/* EXPERIENCES */
+.experiences{padding:7rem 4rem;background:var(--dark)}
+.exp-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:4rem}
+.exp-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,9rem);color:var(--cream);line-height:.88}
+.exp-hdr p{color:rgba(246,237,216,.55);max-width:300px;font-size:.88rem;line-height:1.75}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.ec{overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:border-color .3s}
+.ec:hover{border-color:var(--saffron)}
+.ec.wide{grid-column:span 2}
+.ec img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .5s}
+.ec.wide img{height:290px}
+.ec:hover img{transform:scale(1.05)}
+.ec-ph{width:100%;height:240px;display:flex;align-items:center;justify-content:center;font-size:3.5rem}
+.ec.wide .ec-ph{height:290px}
+.ec-body{padding:1.5rem}
+.ec-tag{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;padding:.28rem .8rem;margin-bottom:.9rem;display:inline-block;border-radius:2px}
+.t-touch{background:rgba(200,87,47,.22);color:#E8875F}
+.t-smell{background:rgba(27,58,40,.55);color:#72C9A0;border:1px solid rgba(114,201,160,.25)}
+.t-sight{background:rgba(90,90,200,.2);color:#A4A4F8}
+.t-taste{background:rgba(245,162,0,.18);color:var(--saffron)}
+.t-action{background:rgba(212,52,32,.22);color:#F08070}
+.ec-body h3{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--cream);margin-bottom:.65rem;line-height:1.2}
+.ec-body p{font-size:.82rem;color:rgba(246,237,216,.55);line-height:1.65}
+/* PAAN */
+.paan{background:#0C0015;padding:8rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+.paan-label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#EE00CC;margin-bottom:1.4rem}
+.paan h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,8rem);line-height:.88;color:#fff;margin-bottom:1.5rem}
+.paan h2 span{color:#EE00CC}
+.paan p{color:rgba(255,255,255,.6);font-size:1rem;line-height:1.85;max-width:460px}
+.paan p em{color:#fff;font-style:italic}
+.paan-blocks{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.pb{padding:2rem;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.9rem;text-align:center;line-height:1.05}
+/* PASSPORT */
+.passport{background:var(--saffron);padding:7rem 4rem;text-align:center}
+.passport .sub{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(18,9,2,.55);margin-bottom:1rem}
+.passport h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,8.5rem);color:var(--dark);line-height:.88;margin-bottom:1.8rem}
+.passport p{max-width:580px;margin:0 auto 2.5rem;font-size:1.05rem;line-height:1.85;color:rgba(18,9,2,.72)}
+.passport .tagline{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:var(--dark);opacity:.45}
+/* EVENT INFO */
+.event-info{padding:9rem 4rem;background:var(--cream2);display:grid;grid-template-columns:1.1fr .9fr;gap:7rem;align-items:center}
+.ei-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(4.5rem,9vw,11rem);line-height:.83;margin-bottom:3rem}
+.ei-h span{color:var(--terra)}
+.info-blocks{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.ib{border-top:1px solid rgba(0,0,0,.14);padding-top:1.1rem}
+.ib .lbl{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:.45rem}
+.ib .val{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;line-height:1.4}
+.ei-right{position:relative}
+.ei-img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.ei-badge{position:absolute;bottom:-2rem;left:-2.2rem;width:155px;height:155px;background:var(--saffron);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.4rem}
+.ei-badge .bnum{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;line-height:1;color:var(--dark)}
+.ei-badge .blbl{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dark);text-align:center;line-height:1.4}
+/* CTA */
+.cta{background:var(--terra);padding:9rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,8.5rem);color:var(--cream);line-height:.88;margin-bottom:1.5rem}
+.cta p{color:rgba(246,237,216,.8);font-size:1rem;line-height:1.85;max-width:440px}
+.cta-btns{display:flex;flex-direction:column;gap:1.2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:1.15rem 2.4rem;font-family:'Jost',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:all .25s}
+.btn-light{background:var(--cream);color:var(--terra)}
+.btn-light:hover{background:var(--dark);color:var(--cream)}
+.btn-outline{background:transparent;border:2px solid var(--cream);color:var(--cream)}
+.btn-outline:hover{background:var(--cream);color:var(--terra)}
+.cta-contact{margin-top:.8rem;color:rgba(246,237,216,.5);font-size:.82rem;line-height:1.7}
+/* FOOTER */
+footer{background:var(--dark);padding:5.5rem 4rem 3rem}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:3.5rem}
+.ft-brand .logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--cream);letter-spacing:.12em;margin-bottom:.9rem;display:block}
+.ft-brand p{color:rgba(246,237,216,.45);font-size:.82rem;line-height:1.75;max-width:270px}
+.ft-col h4{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron);margin-bottom:1.4rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{margin-bottom:.7rem}
+.ft-col ul li a{color:rgba(246,237,216,.5);text-decoration:none;font-size:.88rem;transition:color .2s}
+.ft-col ul li a:hover{color:var(--cream)}
+.ft-btm{display:flex;justify-content:space-between;align-items:center;color:rgba(246,237,216,.3);font-size:.75rem}
+/* FADE IN */
+.fa{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fa.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<nav id="nav" class="nav-dark-hero">
+  <a href="#" class="nav-logo"><span class="star">✦</span> INTRECCIO RASA</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#senses">Experience</a></li>
+    <li><a href="#stalls">Stalls</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#visit" class="nav-btn">Free Entry →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="fi fi-1">
+    <img src="https://images.unsplash.com/photo-1583244683175-0e3f44b7fad7?auto=format&fit=crop&w=320&q=80" alt="Indian textiles" onerror="this.parentElement.style.background='#C8572F';this.remove()">
+    <span class="fc">● Chanakya Textiles</span>
+  </div>
+  <div class="fi fi-2">
+    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=300&q=80" alt="Spices" onerror="this.parentElement.style.background='#F5A200';this.remove()">
+    <span class="fc">● Masala Table</span>
+  </div>
+  <div class="fi fi-3">
+    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=300&q=80" alt="Rangoli" onerror="this.parentElement.style.background='#1B3A28';this.remove()">
+    <span class="fc">● Rangoli Wall</span>
+  </div>
+  <div class="fi fi-4">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=320&q=80" alt="Chai" onerror="this.parentElement.style.background='#D4842A';this.remove()">
+    <span class="fc">● Chai Tea</span>
+  </div>
+  <div class="fi fi-5">
+    <img src="https://images.unsplash.com/photo-1614107151491-6876eecbff89?auto=format&fit=crop&w=300&q=80" alt="Pottery" onerror="this.parentElement.style.background='#8B4513';this.remove()">
+    <span class="fc">● Live Pottery</span>
+  </div>
+  <div class="fi fi-6">
+    <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?auto=format&fit=crop&w=300&q=80" alt="Henna" onerror="this.parentElement.style.background='#4A1B5A';this.remove()">
+    <span class="fc">● Bindi Art</span>
+  </div>
+  <div class="fi fi-7">
+    <img src="https://images.unsplash.com/photo-1610878180933-123728745d46?auto=format&fit=crop&w=300&q=80" alt="Jewellery" onerror="this.parentElement.style.background='#2D5A27';this.remove()">
+    <span class="fc">● Indian Jewellery</span>
+  </div>
+  <div class="badge-wrap">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="95" fill="#F5A200"/>
+      <path id="cp" d="M 100 100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" fill="none"/>
+      <text font-size="20" font-family="'Jost',sans-serif" font-weight="600" letter-spacing="6" fill="#120902">
+        <textPath href="#cp">MILAN 2026 • FREE ENTRY • JULY 10 •</textPath>
+      </text>
+    </svg>
+    <div class="badge-center">🇮🇳</div>
+  </div>
+  <div class="hero-bigtype">
+    <span class="l1">INTRECCIO</span>
+    <span class="l2">RASA</span>
+  </div>
+  <p class="hero-sub">With Love From India</p>
+  <div class="hero-meta">
+    <div class="hm"><span class="lbl">Date</span><span class="val">10 July 2026</span></div>
+    <div class="hm"><span class="lbl">City</span><span class="val">Milan, Italy</span></div>
+    <div class="hm"><span class="lbl">Entry</span><span class="val">Free Public</span></div>
+  </div>
+  <div class="scroll-pill" onclick="document.querySelector('.marquee').scrollIntoView({behavior:'smooth'})">
+    <span>SCROLL<br>DOWN ↓</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="mq-track">
+    <span class="mq-item">WITH LOVE FROM INDIA</span><span class="mq-dot">✦</span>
+    <span class="mq-item">MILAN 2026</span><span class="mq-dot">✦</span>
+    <span class="mq-item">10 LUGLIO</span><span class="mq-dot">✦</span>
+    <span class="mq-item">INTRECCIO RASA</span><span class="mq-dot">✦</span>
+    <span class="mq-item">FREE ENTRY</span><span class="mq-dot">✦</span>
+    <span class="mq-item">ART · CRAFT · HERITAGE</span><span class="mq-dot">✦</span>
+    <span class="mq-item">2000–5000 VISITORS</span><span class="mq-dot">✦</span>
+    <span class="mq-item">WITH LOVE FROM INDIA</span><span class="mq-dot">✦</span>
+    <span class="mq-item">MILAN 2026</span><span class="mq-dot">✦</span>
+    <span class="mq-item">10 LUGLIO</span><span class="mq-dot">✦</span>
+    <span class="mq-item">INTRECCIO RASA</span><span class="mq-dot">✦</span>
+    <span class="mq-item">FREE ENTRY</span><span class="mq-dot">✦</span>
+    <span class="mq-item">ART · CRAFT · HERITAGE</span><span class="mq-dot">✦</span>
+    <span class="mq-item">2000–5000 VISITORS</span><span class="mq-dot">✦</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="fa">
+    <div class="sec-label">About The Event</div>
+    <h2 class="about-h">WHERE<br><em>CULTURE</em><br>BECOMES<br>EMOTION</h2>
+  </div>
+  <div class="fa d1">
+    <blockquote class="about-r">"Born from the fusion of intreccio — Italian for intertwining — and rasa — Sanskrit for emotion, essence, and aesthetic experience."</blockquote>
+    <p>Interrasa is not an exhibition you observe. It is a world you enter, feel, and move through. The storyline follows the rhythm of an ordinary Indian day, transforming familiar moments into immersive cultural experiences.</p>
+    <p>As visitors move through the space, they step into fragments of daily life that together weave a larger narrative of identity, craftsmanship, memory, and connection. Five experiential zones, each designed around a core sense.</p>
+    <p>The event is a public exhibition — open to all. Milanese citizens, the Italian public, and the 50,000+ Indian diaspora in Lombardy. A live dialogue between Indian culture and Milan's design community.</p>
+    <div class="note">✦ A Cultural Exhibition of Art, Dance, Craft & Heritage · 2026 Milan</div>
+  </div>
+</section>
+
+<!-- SENSES -->
+<section class="senses" id="senses">
+  <div class="senses-hdr fa">
+    <div class="sec-label">A Multi-Sensory Journey</div>
+    <h2>FIVE<br>SENSES</h2>
+  </div>
+  <div class="s-grid">
+    <div class="s-card fa"><span class="s-icon">🤲</span><div class="s-num">Zone 01</div><div class="s-title">TOUCH</div><p class="s-desc">Material & Craft — India's rich heritage through tactile interaction. Textiles, handmade materials, artisan processes preserved through generations.</p></div>
+    <div class="s-card fa d1"><span class="s-icon">👃</span><div class="s-num">Zone 02</div><div class="s-title">SMELL</div><p class="s-desc">Aroma & Memory — Ayurvedic ingredients, spices, incense, and traditional perfumes. Scent as cultural and spiritual memory.</p></div>
+    <div class="s-card fa d2"><span class="s-icon">👁</span><div class="s-num">Zone 03</div><div class="s-title">SIGHT</div><p class="s-desc">Visual Culture & Identity — Cinema, crafts, jewellery, and installations reflecting the diversity and vibrancy of Indian visual identity.</p></div>
+    <div class="s-card fa d3"><span class="s-icon">🍵</span><div class="s-num">Zone 04</div><div class="s-title">TASTE</div><p class="s-desc">Street & Ritual Consumption — Chai, spices, mouth fresheners. Food as cultural connector and everyday ritual.</p></div>
+    <div class="s-card fa"><span class="s-icon">✋</span><div class="s-num">Zone 05</div><div class="s-title">ACTION</div><p class="s-desc">Participation & Creation — Workshops, games, personalization. Visitors become co-creators and build their own cultural memory.</p></div>
+  </div>
+</section>
+
+<!-- STALLS GRID -->
+<section class="experiences" id="stalls">
+  <div class="exp-hdr fa">
+    <h2>THE<br>STALLS</h2>
+    <p>Over 25 immersive experiences, workshops, and installations celebrating the authentic beauty of Indian everyday life in Milan.</p>
+  </div>
+  <div class="exp-grid">
+    <!-- TOUCH -->
+    <div class="ec wide fa">
+      <img src="https://images.unsplash.com/photo-1583244683175-0e3f44b7fad7?auto=format&fit=crop&w=900&q=80" alt="Chanakya" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-touch">Touch · Zone 01</span><h3>Chanakya International — Swatch Book Exhibition</h3><p>A curated swatch book exhibition showcasing textiles and fabric samples. Guests explore swatches wearing gloves — a premium, museum-like interaction emphasising the value and delicacy of Indian craftsmanship.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=500&q=80" alt="Kolhapuri" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-touch">Touch · Zone 01</span><h3>Kolhapuri Chappals</h3><p>A dialogue between Indian and Italian leather craftsmanship — celebrating shared appreciation for quality, heritage, and timeless artisanship across cultures.</p></div>
+    </div>
+    <div class="ec fa">
+      <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=500&q=80" alt="Rugs" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-touch">Touch · Zone 01</span><h3>Rugs as Art</h3><p>Indian rugs as immersive pieces of craftsmanship. Weaves, patterns, and the musical traditions woven into sitting on the floor — humility, togetherness, respect.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <div class="ec-ph" style="background:#1B3A28">🪡</div>
+      <div class="ec-body"><span class="ec-tag t-touch">Touch · Zone 01</span><h3>Upcycled Bandana Shop</h3><p>Sustainable fashion using recycled saree fabrics. Style them as bandanas, scarves, or wrist ties — creativity meets Indian textile heritage.</p></div>
+    </div>
+    <div class="ec fa d2">
+      <div class="ec-ph" style="background:#5C2A00">🎨</div>
+      <div class="ec-body"><span class="ec-tag t-touch">Touch · Zone 01</span><h3>Block Printing Workshop</h3><p>The "thump" — the physical force to transfer pigment. A community textile built stamp by stamp by every visitor throughout the day.</p></div>
+    </div>
+    <!-- SMELL -->
+    <div class="ec wide fa">
+      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80" alt="Masala" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-smell">Smell · Zone 02</span><h3>The Masala Story</h3><p>Stopped not by a banner — but by the smell of freshly brewed chai and the rich aroma of Indian spices. A masala table loaded with spices from across India. Two senses, one stall, the whole story of India in a single stop.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <img src="https://images.unsplash.com/photo-1519638399535-1b036603ac77?auto=format&fit=crop&w=500&q=80" alt="Itra" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-smell">Smell · Zone 02</span><h3>Itra Stall — Scent Library</h3><p>Transporting guests to 17th-century Mughal courts. Explore Oud, Sandalwood, and the legendary Rooh Gulab — the "slow perfume" that melts into the skin.</p></div>
+    </div>
+    <div class="ec fa">
+      <div class="ec-ph" style="background:#1A3A20">🕯️</div>
+      <div class="ec-body"><span class="ec-tag t-smell">Smell · Zone 02</span><h3>Dhoop Bathi — Incense</h3><p>A collaborative exhibit with sustainable Indian incense brands. Fragrance as ritual, spirituality, meditation, and everyday Indian life woven through generations.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <div class="ec-ph" style="background:#2D1800">🌿</div>
+      <div class="ec-body"><span class="ec-tag t-smell">Smell · Zone 02</span><h3>Mouth Freshener Stall</h3><p>Sweet blends to spiced masala mixes — an essential part of Indian food culture. Visitors sample traditional mouth fresheners as Indians do on every street and market.</p></div>
+    </div>
+    <!-- SIGHT -->
+    <div class="ec fa">
+      <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=500&q=80" alt="Movie Room" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-sight">Sight · Zone 03</span><h3>Movie Room</h3><p>Iconic Indian films — cinematic milestones and mirrors of everyday Indian life. Storytelling traditions and visual language that shaped the country's identity globally.</p></div>
+    </div>
+    <div class="ec wide fa d1">
+      <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=900&q=80" alt="Rangoli" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-sight">Sight · Zone 03</span><h3>Rangoli Wall — You Complete It</h3><p>A giant half-finished Rangoli wall. Every visitor adds their sticker — by the end of the exhibition the wall becomes a masterpiece made by hundreds of hands together. Participation as art form.</p></div>
+    </div>
+    <div class="ec fa">
+      <img src="imgs/pottery.jfif" alt="Pottery">
+      <div class="ec-body"><span class="ec-tag t-sight">Sight · Zone 03</span><h3>Pottery Live Demo</h3><p>The artisan sells the "birth" of a story. Every brushstroke bridges the soil of India and the eyes of Milan. From tiny kulhads to massive matkas.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <div class="ec-ph" style="background:#1A0F40">✍️</div>
+      <div class="ec-body"><span class="ec-tag t-sight">Sight · Zone 03</span><h3>Calligraphy & Languages</h3><p>A creative space celebrating Indian scripts and typography. Write your name using stencils or with a professional calligrapher. The beauty of Indian handwritten art forms.</p></div>
+    </div>
+    <div class="ec fa d2">
+      <div class="ec-ph" style="background:#400015">💎</div>
+      <div class="ec-body"><span class="ec-tag t-sight">Sight · Zone 03</span><h3>Indian Jewellery</h3><p>A curated collection of jhumkas, bangles, anklets, nose rings, and layered necklaces. Craftsmanship, colors, and ornamentation culture from across India's regions.</p></div>
+    </div>
+    <!-- TASTE -->
+    <div class="ec wide fa">
+      <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80" alt="Chai" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-taste">Taste · Zone 04</span><h3>Chai Tea Stall</h3><p>India has one of the richest tea cultures in the world. Free sachets of tea to taste and take home. A warm cup — the conversation starter of a billion people. We turn foot traffic into genuine engagement.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <div class="ec-ph" style="background:#2B1000">☕</div>
+      <div class="ec-body"><span class="ec-tag t-taste">Taste · Zone 04</span><h3>Filter Coffee</h3><p>The legendary South Indian filter coffee — poured from a steel tumbler to a davara. Not just a drink: a ritual, a tradition, a piece of culture that millions wake up to every morning.</p></div>
+    </div>
+    <div class="ec fa">
+      <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=500&q=80" alt="Papad" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-taste">Taste · Zone 04</span><h3>Papad Stall</h3><p>"Grandmother's Geometry" — the precision of sun-dried lentil crackers. Ochre, turmeric yellow, terracotta: organic, artisanal, and gloriously slow-made.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <div class="ec-ph" style="background:#142010">🌶️</div>
+      <div class="ec-body"><span class="ec-tag t-taste">Taste · Zone 04</span><h3>Food Court — Taste of India</h3><p>Street-food style area with regional stalls covering North, South, East, and West Indian cuisines. Masala Chai corner and traditional Indian sweets. All eco-friendly packaging.</p></div>
+    </div>
+    <!-- ACTION -->
+    <div class="ec wide fa">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Puppet" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-action">Action · Zone 05</span><h3>Jaipur Puppet Workshop — The Storytellers</h3><p>Using leftover katrans (fabric scraps) as the base for doll clothing. Personalize the faces, add detailing of your choice — take home a meaningful souvenir. Sustainability and mindful reuse in every stitch.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?auto=format&fit=crop&w=500&q=80" alt="Bindi" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-action">Action · Zone 05</span><h3>Bindi & Temporary Tattoo</h3><p>Interactive beauty station inspired by Indian festive makeup. Hand-painted motifs inspired by henna and traditional art. Playful self-expression and cultural exploration.</p></div>
+    </div>
+    <div class="ec fa">
+      <img src="https://images.unsplash.com/photo-1583391733981-8498408ee4b6?auto=format&fit=crop&w=500&q=80" alt="Saree" onerror="this.style.display='none'">
+      <div class="ec-body"><span class="ec-tag t-action">Action · Zone 05</span><h3>Saree Draping Station</h3><p>Six yards of elegance. Learn the art of the drape — a garment with no zippers or buttons, only the grace of the person wearing it. Photo corner included.</p></div>
+    </div>
+    <div class="ec fa d1">
+      <div class="ec-ph" style="background:#3A1A00">🪃</div>
+      <div class="ec-body"><span class="ec-tag t-action">Action · Zone 05</span><h3>Gilli Danda Corner</h3><p>One of India's oldest street games. Kids put down their phones and pick up a danda — while parents enjoy chai next door. Pure joy, pure India.</p></div>
+    </div>
+    <div class="ec fa d2">
+      <div class="ec-ph" style="background:#0F2A1A">🌺</div>
+      <div class="ec-body"><span class="ec-tag t-action">Action · Zone 05</span><h3>Ayurvedic Products</h3><p>Traditional Indian beauty rituals and Ayurvedic self-care. Explore amla, neem, hibiscus, sandalwood, and turmeric. Wellness, sustainability, and India's heritage in natural beauty care.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAANWADI -->
+<section class="paan">
+  <div class="fa">
+    <div class="paan-label">Special Installation · The Neon Betel</div>
+    <h2>PAANWADI<br><span>AESTHETIC</span></h2>
+    <p>Stepping into a technicolor time capsule where the street corner meets the gallery. An immersive installation reimagining the iconic Indian Paan Wadi through the lens of Indian Kitsch and Maximalism.<br><br>In the heart of India, the Paan stall is more than a shop — it is a social hub, a burst of flavor, and a visual explosion of <em>organized chaos</em>. We are bringing this to Milan.</p>
+  </div>
+  <div class="paan-blocks fa d1">
+    <div class="pb" style="background:#EE00CC;color:#0C0015">INDIAN<br>KITSCH</div>
+    <div class="pb" style="background:#39FF14;color:#0C0015">MAXI<br>MALISM</div>
+    <div class="pb" style="background:#FFE600;color:#0C0015;font-size:3.2rem">🌿</div>
+    <div class="pb" style="background:#FF4500;color:#fff">NEON<br>BETEL</div>
+  </div>
+</section>
+
+<!-- MAIN STAGE -->
+<section style="background:var(--forest);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center">
+  <div class="fa">
+    <div style="font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--saffron);margin-bottom:1.4rem">The Grand Opening · Main Stage</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,8rem);line-height:.88;color:var(--cream);margin-bottom:1.5rem">KATHAK.<br>BOLLYWOOD.<br>SITAR.</h2>
+    <p style="color:rgba(246,237,216,.65);font-size:1rem;line-height:1.85;max-width:440px">A formal opening ceremony featuring the Consul General of India and a Comune di Milano representative. Followed by classical Kathak and Bharatanatyam dance, a professional Bollywood medley troupe, and a live Sitar &amp; fusion music ensemble.</p>
+  </div>
+  <div class="fa d1" style="display:flex;flex-direction:column;gap:1.2rem">
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:1.8rem;display:flex;align-items:center;gap:1.5rem">
+      <span style="font-size:2.5rem">💃</span>
+      <div><div style="font-family:'Bebas Neue';font-size:1.5rem;color:var(--cream);letter-spacing:.05em">Kathak &amp; Bharatanatyam</div><div style="color:rgba(246,237,216,.5);font-size:.82rem;margin-top:.3rem">Classical Indian Dance</div></div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:1.8rem;display:flex;align-items:center;gap:1.5rem">
+      <span style="font-size:2.5rem">🎬</span>
+      <div><div style="font-family:'Bebas Neue';font-size:1.5rem;color:var(--cream);letter-spacing:.05em">Bollywood Medley Troupe</div><div style="color:rgba(246,237,216,.5);font-size:.82rem;margin-top:.3rem">Professional Performance</div></div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:1.8rem;display:flex;align-items:center;gap:1.5rem">
+      <span style="font-size:2.5rem">🎸</span>
+      <div><div style="font-family:'Bebas Neue';font-size:1.5rem;color:var(--cream);letter-spacing:.05em">Sitar &amp; Fusion Ensemble</div><div style="color:rgba(246,237,216,.5);font-size:.82rem;margin-top:.3rem">Live Music</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSPORT -->
+<section class="passport">
+  <div class="sub">The Passport Program</div>
+  <h2>YOUR PERSONAL<br>STORY OF INDIA</h2>
+  <p>Every visitor gets a blank postcard at the entrance — and that is just the beginning. As they move through each stop, they collect a unique stamp in a traditional Indian design. By the time they reach the exit, their postcard is no longer blank — it is a beautiful piece of Indian art, built stamp by stamp, stop by stop. Something they made without even realising it.</p>
+  <div class="tagline">✦ Not just a souvenir — it is their personal story of India ✦</div>
+</section>
+
+<!-- EVENT INFO -->
+<section class="event-info" id="visit">
+  <div class="fa">
+    <h2 class="ei-h">VISIT<br>US IN<br><span>MILAN</span></h2>
+    <div class="info-blocks">
+      <div class="ib"><div class="lbl">Date</div><div class="val">10 July 2026<br>One Day Only</div></div>
+      <div class="ib"><div class="lbl">Venue</div><div class="val">Fabbrica del Vapore<br>or Parco Sempione</div></div>
+      <div class="ib"><div class="lbl">Format</div><div class="val">Open-Air &amp; Indoor<br>Multicultural Exhibition</div></div>
+      <div class="ib"><div class="lbl">Admission</div><div class="val">Free Entry<br>Open To All</div></div>
+      <div class="ib"><div class="lbl">Audience</div><div class="val">Milanese Citizens<br>Indian Diaspora (50K+)</div></div>
+      <div class="ib"><div class="lbl">Expected</div><div class="val">2,000–5,000<br>Visitors</div></div>
+    </div>
+  </div>
+  <div class="ei-right fa d1">
+    <img class="ei-img" src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=700&q=80" alt="Milan India" style="background:var(--terra)" onerror="this.style.background='var(--terra)'">
+    <div class="ei-badge">
+      <span class="bnum">10</span>
+      <span class="blbl">JULY<br>2026<br>MILAN</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="fa">
+    <h2>JOIN<br>THE<br>JOURNEY</h2>
+    <p>Experience India beyond stereotypes — not as something to observe, but as a world to immerse yourself in. A free, one-day celebration of culture, craftsmanship, and lived experience in the heart of Milan.</p>
+  </div>
+  <div class="cta-btns fa d1">
+    <a href="mailto:hello@intrecciorasa.com" class="btn btn-light">Get in Touch →</a>
+    <a href="#" class="btn btn-outline">Follow on Instagram</a>
+    <div class="cta-contact">hello@intrecciorasa.com<br>@intrecciorasa &nbsp;·&nbsp; Milan, Italy</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <span class="logo">✦ INTRECCIO RASA</span>
+      <p>With Love From India. A one-day cultural exhibition of art, dance, craft and heritage — celebrating the richness of Indian civilisation in the heart of Milan, 10 July 2026.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Experience</h4>
+      <ul>
+        <li><a href="#">The 5 Senses</a></li>
+        <li><a href="#">Craft Collective</a></li>
+        <li><a href="#">Sensory Street</a></li>
+        <li><a href="#">Workshops</a></li>
+        <li><a href="#">Main Stage</a></li>
+        <li><a href="#">Kids Corner</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#">Event Info</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">The Passport</a></li>
+        <li><a href="#">For Families</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Partnerships</a></li>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Comune di Milano</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-btm">
+    <span>© 2026 Intreccio Rasa. With Love From India.</span>
+    <span>A one-day exhibition · Milan, Italy · 10 July 2026</span>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>60)});
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1});
+document.querySelectorAll('.fa').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
+
+
+
+
+
