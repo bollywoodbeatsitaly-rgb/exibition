@@ -16,7 +16,8 @@ body{font-family:Jost,Arial,sans-serif;background:var(--cream);color:var(--ink);
 img{max-width:100%;display:block}
 a{color:inherit}
 .site-nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.1rem 3rem;background:rgba(243,236,220,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(15,13,10,.08)}
-.brand{font-family:"Cormorant Garamond",serif;font-size:1.08rem;font-weight:600;letter-spacing:.1em;text-decoration:none;text-transform:uppercase;white-space:nowrap}
+.brand{display:inline-flex;align-items:center;gap:.75rem;font-family:"Cormorant Garamond",serif;font-size:1.08rem;font-weight:600;letter-spacing:.1em;text-decoration:none;text-transform:uppercase;white-space:nowrap}
+.brand img{height:2rem;width:auto;display:block}
 .nav-links{display:flex;gap:1.8rem;list-style:none}
 .nav-links a{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-decoration:none;text-transform:uppercase;color:rgba(15,13,10,.68)}
 .nav-links a:hover,.nav-links a.active{color:var(--indigo)}
