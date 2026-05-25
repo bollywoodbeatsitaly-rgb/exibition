@@ -10,6 +10,10 @@
   --indigo:#1d3557;
   --gold:#b89a5e;
   --line:rgba(15,13,10,.12);
+  --terracota:#D06224;
+  --chile:#AE431E;
+  --olive:#8A6635;
+  --ochre:#DAA520;
 }
 html{scroll-behavior:smooth}
 body{font-family:Jost,Arial,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
@@ -20,7 +24,7 @@ a{color:inherit}
 .brand img{height:2.5rem;width:auto;display:block}
 .nav-links{display:flex;gap:1.8rem;list-style:none}
 .nav-links a{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-decoration:none;text-transform:uppercase;color:rgba(15,13,10,.68)}
-.nav-links a:hover,.nav-links a.active{color:var(--indigo)}
+.nav-links a:hover,.nav-links a.active{color:var(--terracota)}
 .nav-cta{background:var(--ink);color:var(--cream);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:.72rem 1.1rem}
 .hero{min-height:92vh;display:grid;grid-template-columns:1.08fr .92fr;align-items:end;gap:4rem;padding:9rem 4rem 4rem;background:var(--ink);color:var(--cream)}
 .hero-media{height:72vh;min-height:480px;position:relative;overflow:hidden}
@@ -41,7 +45,7 @@ p{line-height:1.8}
 .section{padding:7rem 4rem}
 .section.dark{background:var(--charcoal);color:var(--cream)}
 .section.paper{background:var(--paper)}
-.section.clay{background:var(--clay);color:var(--cream)}
+.section.clay{background:var(--chile);color:var(--cream)}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .copy p{margin-top:1rem;color:rgba(15,13,10,.68)}
 .dark .copy p,.clay .copy p{color:rgba(243,236,220,.72)}
@@ -51,7 +55,7 @@ p{line-height:1.8}
 .dark .card{background:rgba(255,255,255,.045);border-color:rgba(243,236,220,.12)}
 .card img{width:100%;height:240px;object-fit:cover;filter:saturate(.72)}
 .card-body{padding:1.45rem}
-.tag{display:inline-block;font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--indigo);margin-bottom:.8rem}
+.tag{display:inline-block;font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terracota);margin-bottom:.8rem}
 .dark .tag{color:var(--gold)}
 .card p{font-size:.88rem;color:rgba(15,13,10,.64);margin-top:.55rem}
 .dark .card p{color:rgba(243,236,220,.62)}
@@ -59,7 +63,7 @@ p{line-height:1.8}
 .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700;padding:1rem 1.35rem;border:1px solid currentColor}
 .btn.fill{background:var(--ink);color:var(--cream);border-color:var(--ink)}
 .dark .btn.fill,.clay .btn.fill{background:var(--cream);color:var(--ink);border-color:var(--cream)}
-.marquee{background:var(--indigo);color:var(--cream);overflow:hidden;white-space:nowrap}
+.marquee{background:var(--chile);color:var(--cream);overflow:hidden;white-space:nowrap}
 .marquee-track{display:inline-flex;animation:marquee 30s linear infinite}
 .marquee span{font-family:"Bebas Neue",Impact,sans-serif;font-size:1.45rem;letter-spacing:.08em;padding:1rem 1.2rem}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -82,7 +86,7 @@ p{line-height:1.8}
 .footer-bottom{display:flex;justify-content:space-between;gap:1rem;padding-top:1.5rem;color:rgba(243,236,220,.38);font-size:.78rem}
 .detail-table{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
 .detail{border-top:1px solid rgba(15,13,10,.16);padding-top:1rem}
-.detail span{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--earth);margin-bottom:.45rem}
+.detail span{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terracota);margin-bottom:.45rem}
 .detail strong{font-family:"Cormorant Garamond",serif;font-size:1.2rem}
 .form{display:grid;gap:1rem}
 input,select,textarea{width:100%;font:inherit;background:rgba(255,255,255,.06);border:1px solid rgba(243,236,220,.18);color:var(--cream);padding:.9rem}
