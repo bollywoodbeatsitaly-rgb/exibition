@@ -42,13 +42,45 @@
         <div class="list-item"><h3>Location</h3><p>Fabbrica del Vapore, Milan | 11-12 July 2026</p></div>
       </div>
     </div>
-    <form class="form" onsubmit="event.preventDefault(); alert('Thank you. We will be in touch soon.');">
-      <label>Name<input type="text" required></label>
-      <label>Email<input type="email" required></label>
-      <label>Type of Enquiry<select><option>General</option><option>Partnership</option><option>Press</option><option>Institutional</option><option>Volunteer</option></select></label>
-      <label>Message<textarea required></textarea></label>
-      <button class="btn fill" type="submit">Send Message</button>
+    <form class="form" id="contact-form">
+      <label>Name<input id="cf-name" type="text" required></label>
+      <label>Email<input id="cf-email" type="email" required></label>
+      <label>Type of Enquiry<select id="cf-enquiry"><option>General</option><option>Partnership</option><option>Press</option><option>Institutional</option><option>Volunteer</option></select></label>
+      <label>Message<textarea id="cf-message" required></textarea></label>
+      <button class="btn fill" type="submit" id="cf-btn">Send Message</button>
+      <p id="cf-status" style="margin-top:1rem;font-size:.9rem;opacity:.8;display:none"></p>
     </form>
+    <script>
+      var SCRIPT_URL = 'YOUR_WEBAPP_URL';
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = document.getElementById('cf-btn');
+        var status = document.getElementById('cf-status');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        status.style.display = 'none';
+        var payload = JSON.stringify({
+          name:    document.getElementById('cf-name').value.trim(),
+          email:   document.getElementById('cf-email').value.trim(),
+          enquiry: document.getElementById('cf-enquiry').value,
+          message: document.getElementById('cf-message').value.trim()
+        });
+        fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: payload })
+          .then(function() {
+            status.textContent = 'Message sent. We will be in touch soon.';
+            status.style.display = 'block';
+            document.getElementById('contact-form').reset();
+          })
+          .catch(function() {
+            status.textContent = 'Something went wrong. Please email us directly at info@binditobrera.it';
+            status.style.display = 'block';
+          })
+          .finally(function() {
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+          });
+      });
+    </script>
   </section>
 
   <section class="section paper" id="partner">
