@@ -76,46 +76,55 @@
     </div>
     <div>
       <h3 style="color:var(--cream);margin-bottom:1.5rem">Register Your Visit</h3>
-      <form class="reg-form" onsubmit="handleRegistration(event)">
+      <form class="reg-form" id="registration-form">
         <label>
           <span style="color:rgba(243,236,220,.58);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:.4rem">Name</span>
-          <input type="text" name="name" required>
+          <input type="text" id="reg-name" required>
         </label>
         <label>
           <span style="color:rgba(243,236,220,.58);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:.4rem">Email</span>
-          <input type="email" name="email" required>
+          <input type="email" id="reg-email" required>
         </label>
         <label>
           <span style="color:rgba(243,236,220,.58);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:.4rem">Number of Attendees</span>
-          <input type="number" name="attendees" min="1" required>
+          <input type="number" id="reg-attendees" min="1" required>
         </label>
-        <button class="btn fill" type="submit" style="background:var(--gold);border-color:var(--gold);color:var(--charcoal);margin-top:1rem;width:100%">Register</button>
+        <button class="btn fill" type="submit" id="reg-btn" style="background:var(--gold);border-color:var(--gold);color:var(--charcoal);margin-top:1rem;width:100%">Register</button>
+        <p id="reg-status" style="margin-top:1rem;font-size:.9rem;opacity:.8;display:none"></p>
       </form>
-      <div id="reg-success" style="display:none;margin-top:1rem;padding:1rem;background:rgba(185,154,94,.2);border:1px solid var(--gold);color:var(--cream);font-size:.9rem;text-align:center;border-radius:4px">
-        Thank you! Your registration has been received.
-      </div>
     </div>
   </section>
   
   <script>
-    function handleRegistration(event) {
-      event.preventDefault();
-      const form = event.target;
-      const successMsg = document.getElementById('reg-success');
-      
-      // Show success message
-      successMsg.style.display = 'block';
-      
-      // Reset form
-      form.reset();
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        successMsg.style.display = 'none';
-      }, 5000);
-      
-      // TODO: Send data to backend
-    }
+    var REG_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyw7ryrzEePJamEv65kD6gbq0ZM1NvLzWXtKfi7DElDnP6xUMXm6FQBBtOcdTMkK_Mcyw/exec';
+    document.getElementById('registration-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('reg-btn');
+      var status = document.getElementById('reg-status');
+      btn.disabled = true;
+      btn.textContent = 'Registering…';
+      status.style.display = 'none';
+      var payload = JSON.stringify({
+        type: 'registration',
+        name:     document.getElementById('reg-name').value.trim(),
+        email:    document.getElementById('reg-email').value.trim(),
+        attendees: parseInt(document.getElementById('reg-attendees').value)
+      });
+      fetch(REG_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: payload })
+        .then(function() {
+          status.textContent = 'Thank you! Your registration has been received.';
+          status.style.display = 'block';
+          document.getElementById('registration-form').reset();
+        })
+        .catch(function() {
+          status.textContent = 'Something went wrong. Please email us at info@binditobrera.it';
+          status.style.display = 'block';
+        })
+        .finally(function() {
+          btn.disabled = false;
+          btn.textContent = 'Register';
+        });
+    });
   </script>
 </main>
 
