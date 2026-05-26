@@ -89,6 +89,7 @@ p{line-height:1.8}
 .detail span{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terracota);margin-bottom:.45rem}
 .detail strong{font-family:"Cormorant Garamond",serif;font-size:1.2rem}
 .form{display:grid;gap:1rem}
+.reg-form{display:grid;gap:1rem}
 input,select,textarea{width:100%;font:inherit;background:rgba(255,255,255,.06);border:1px solid rgba(243,236,220,.18);color:var(--cream);padding:.9rem}
 option{background:var(--charcoal);color:var(--cream)}
 textarea{min-height:130px;resize:vertical}

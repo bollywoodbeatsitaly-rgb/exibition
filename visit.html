@@ -69,9 +69,54 @@
   </section>
 
   <section class="section clay split" style="background:var(--earth)">
-    <div><h2>Questions?</h2><p class="lead">For partnerships, press, or visitor information, contact the team.</p></div>
-    <div class="button-row"><a class="btn fill" href="contact.html" style="background:var(--terracota);border-color:var(--terracota);color:var(--cream)">Contact Us</a></div>
+    <div>
+      <h2>Questions?</h2>
+      <p class="lead">For partnerships, press, or visitor information, contact the team.</p>
+      <div class="button-row"><a class="btn fill" href="contact.html" style="background:var(--terracota);border-color:var(--terracota);color:var(--cream)">Contact Us</a></div>
+    </div>
+    <div>
+      <h3 style="color:var(--cream);margin-bottom:1.5rem">Register Your Visit</h3>
+      <form class="reg-form" onsubmit="handleRegistration(event)">
+        <label>
+          <span style="color:rgba(243,236,220,.58);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:.4rem">Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span style="color:rgba(243,236,220,.58);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:.4rem">Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span style="color:rgba(243,236,220,.58);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:.4rem">Number of Attendees</span>
+          <input type="number" name="attendees" min="1" required>
+        </label>
+        <button class="btn fill" type="submit" style="background:var(--gold);border-color:var(--gold);color:var(--charcoal);margin-top:1rem;width:100%">Register</button>
+      </form>
+      <div id="reg-success" style="display:none;margin-top:1rem;padding:1rem;background:rgba(185,154,94,.2);border:1px solid var(--gold);color:var(--cream);font-size:.9rem;text-align:center;border-radius:4px">
+        Thank you! Your registration has been received.
+      </div>
+    </div>
   </section>
+  
+  <script>
+    function handleRegistration(event) {
+      event.preventDefault();
+      const form = event.target;
+      const successMsg = document.getElementById('reg-success');
+      
+      // Show success message
+      successMsg.style.display = 'block';
+      
+      // Reset form
+      form.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+      
+      // TODO: Send data to backend
+    }
+  </script>
 </main>
 
 <footer class="footer">
