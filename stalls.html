@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Stalls and Immersive Experiences | Bindi to Brera</title>
+<title>Mostre ed Esperienze Immersive | Bindi to Brera</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="imgs/bindi-to-brera-logo.png" type="image/png">
@@ -12,75 +12,76 @@
 <nav class="site-nav">
   <a class="brand" href="index.html"><img src="imgs/bindi-to-brera-logo.png" alt="Bindi to Brera logo">Bindi to Brera</a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a class="active" href="stalls.html">Stalls</a></li>
-    <li><a href="visit.html">Visit</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="about.html" data-i18n="nav.about">Chi Siamo</a></li>
+    <li><a href="experience.html" data-i18n="nav.experience">Esperienza</a></li>
+    <li><a class="active" href="stalls.html" data-i18n="nav.stalls">Mostre</a></li>
+    <li><a href="visit.html" data-i18n="nav.visit">Visita</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">Contatti</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle">EN</button>
   <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-  <a class="nav-cta" href="visit.html">Visit</a>
+  <a class="nav-cta" href="visit.html" data-i18n="nav.cta">Visita</a>
 </nav>
 
 <main>
   <section class="page-hero">
     <img src="imgs/stalls_cover.png" alt="Curated exhibition stalls">
     <div class="page-hero-content">
-      <div class="eyebrow">Approved Experience Set</div>
-      <h1>Stalls and<br>Immersive<br>Experiences</h1>
-      <p>A focused programme of craft participation, material culture, sound, fragrance, botanical knowledge, and spatial reflection.</p>
+      <div class="eyebrow" data-i18n="stalls.hero.eyebrow">Set di Esperienze Approvato</div>
+      <h1 data-i18n="stalls.hero.h1">Mostre ed<br>Esperienze<br>Immersive</h1>
+      <p data-i18n="stalls.hero.p">Un programma mirato di partecipazione artigianale, cultura materiale, suono, fragranza, conoscenza botanica e riflessione spaziale.</p>
     </div>
   </section>
 
   <section class="section paper" id="craft">
-    <div class="eyebrow">Craft Experiences</div>
-    <h2>Participatory Making</h2>
+    <div class="eyebrow" data-i18n="stalls.craft.eyebrow">Esperienze Artigianali</div>
+    <h2 data-i18n="stalls.craft.h2">Fare Partecipativo</h2>
     <div class="grid">
-      <article class="card" id="block"><img src="imgs/blocks.jfif" alt="Block printing workshop"><div class="card-body"><span class="tag">Workshop</span><h3>Block Printing Workshop</h3><p>Collaborative textile printing where visitors self-print, experience the pressure of the block, and add to a shared textile surface.</p></div></article>
-      <article class="card" id="pottery"><img src="imgs/pottery.jfif" alt="Live clay pottery"><div class="card-body"><span class="tag">Live Making</span><h3>Pottery</h3><p>Live clay making shaped as storytelling through craft, earth, hand, form, and inherited technique.</p></div></article>
-      <article class="card" id="calligraphy"><img src="imgs/vira_gemini.jfif" alt="Indian language calligraphy"><div class="card-body"><span class="tag">Script</span><h3>Calligraphy</h3><p>Indian language exploration with visitor participation through writing, stencils, and guided mark-making.</p></div></article>
-      <article class="card" id="saree"><img src="imgs/saree.jfif" alt="Saree draping exploration"><div class="card-body"><span class="tag">Textile</span><h3>Saree Draping</h3><p>Contemporary draping exploration that treats six yards of fabric as design, identity, sculpture, and personal movement.</p></div></article>
-      <article class="card" id="bandana"><img src="imgs/bandana_chatgpt.png" alt="Upcycled bandana styling"><div class="card-body"><span class="tag">Sustainable Styling</span><h3>Upcycled Bandana</h3><p>A sustainable styling experience using textile reuse for fashion experimentation and personal expression.</p></div></article>
-      <article class="card" id="rangoli"><img src="imgs/rangoli_gemini.jfif" alt="Rangoli wall installation"><div class="card-body"><span class="tag">Wall Installation</span><h3>Rangoli Wall</h3><p>A collective wall installation where each visitor contributes through sticker placement, plus a public Rangoli sand-art competition open to all ages.</p></div></article>
-      <article class="card" id="bindi"><img src="imgs/bindi_tattoo.jpg" alt="Bindi and temporary tattoo station"><div class="card-body"><span class="tag">Adornment</span><h3>Bindi &amp; Temporary Tattoo</h3><p>Interactive beauty station with bindis in varied shapes, colours, and designs, plus small hand-painted motifs around the eyes and forehead inspired by henna and traditional Indian art.</p></div></article>
+      <article class="card" id="block"><img src="imgs/blocks.jfif" alt="Block printing workshop"><div class="card-body"><span class="tag" data-i18n="stalls.card.block.tag">Workshop</span><h3 data-i18n="stalls.card.block.h3">Workshop di Stampa con Blocchi</h3><p data-i18n="stalls.card.block.p">Stampa tessile collaborativa dove i visitatori stampano da soli, sperimentano la pressione del blocco e contribuiscono a una superficie tessile condivisa.</p></div></article>
+      <article class="card" id="pottery"><img src="imgs/pottery.jfif" alt="Live clay pottery"><div class="card-body"><span class="tag" data-i18n="stalls.card.pottery.tag">Creazione dal Vivo</span><h3 data-i18n="stalls.card.pottery.h3">Ceramica</h3><p data-i18n="stalls.card.pottery.p">Creazione dal vivo con argilla come narrazione attraverso artigianato, terra, mano, forma e tecnica ereditata.</p></div></article>
+      <article class="card" id="calligraphy"><img src="imgs/vira_gemini.jfif" alt="Indian language calligraphy"><div class="card-body"><span class="tag" data-i18n="stalls.card.calligraphy.tag">Scrittura</span><h3 data-i18n="stalls.card.calligraphy.h3">Calligrafia</h3><p data-i18n="stalls.card.calligraphy.p">Esplorazione delle lingue indiane con partecipazione dei visitatori attraverso scrittura, stencil e creazione di segni guidata.</p></div></article>
+      <article class="card" id="saree"><img src="imgs/saree.jfif" alt="Saree draping exploration"><div class="card-body"><span class="tag" data-i18n="stalls.card.saree.tag">Tessile</span><h3 data-i18n="stalls.card.saree.h3">Drappeggio del Sari</h3><p data-i18n="stalls.card.saree.p">Esplorazione contemporanea del drappeggio che tratta sei metri di tessuto come design, identità, scultura e movimento personale.</p></div></article>
+      <article class="card" id="bandana"><img src="imgs/bandana_chatgpt.png" alt="Upcycled bandana styling"><div class="card-body"><span class="tag" data-i18n="stalls.card.bandana.tag">Stile Sostenibile</span><h3 data-i18n="stalls.card.bandana.h3">Bandana Riciclata</h3><p data-i18n="stalls.card.bandana.p">Un'esperienza di stile sostenibile che utilizza il riutilizzo tessile per la sperimentazione della moda e l'espressione personale.</p></div></article>
+      <article class="card" id="rangoli"><img src="imgs/rangoli_gemini.jfif" alt="Rangoli wall installation"><div class="card-body"><span class="tag" data-i18n="stalls.card.rangoli.tag">Installazione Murale</span><h3 data-i18n="stalls.card.rangoli.h3">Muro di Rangoli</h3><p data-i18n="stalls.card.rangoli.p">Un'installazione murale collettiva dove ogni visitatore contribuisce attraverso il posizionamento di adesivi, più una competizione pubblica di arte con la sabbia Rangoli aperta a tutte le età.</p></div></article>
+      <article class="card" id="bindi"><img src="imgs/bindi_tattoo.jpg" alt="Bindi and temporary tattoo station"><div class="card-body"><span class="tag" data-i18n="stalls.card.bindi.tag">Ornamento</span><h3 data-i18n="stalls.card.bindi.h3">Bindi e Tatuaggio Temporaneo</h3><p data-i18n="stalls.card.bindi.p">Stazione di bellezza interattiva con bindi in varie forme, colori e design, più piccoli motivi dipinti a mano intorno agli occhi e alla fronte ispirati all'hennè e all'arte indiana tradizionale.</p></div></article>
     </div>
   </section>
 
   <section class="section dark" id="material">
-    <div class="eyebrow">Material and Cultural Explorations</div>
-    <h2>Archives of Matter</h2>
+    <div class="eyebrow" data-i18n="stalls.material.eyebrow">Esplorazioni Materiali e Culturali</div>
+    <h2 data-i18n="stalls.material.h2">Archivi della Materia</h2>
     <div class="grid">
-      <article class="card" id="spice-archive"><img src="imgs/generated-spice-archive.png" alt="Spice archive"><div class="card-body"><span class="tag">Material Culture</span><h3>Spice Archive</h3><p>Spices are presented through agricultural heritage, colour, texture, and global trade significance.</p></div></article>
-      <article class="card" id="fragrance-chamber"><img src="imgs/generated-fragrance-chamber.png" alt="Fragrance chamber"><div class="card-body"><span class="tag">Natural Perfumery</span><h3>Fragrance Chamber</h3><p>Material ingredients, craftsmanship, memory, and cultural storytelling through fragrance history.</p></div></article>
-      <article class="card" id="ayurvedic-products"><img src="imgs/ayurveda_gemini.jfif" alt="Ayurvedic products"><div class="card-body"><span class="tag">Botanical Knowledge</span><h3>Ayurvedic Products</h3><p>Beauty and wellness traditions presented through ingredient exploration and material heritage.</p></div></article>
-      <article class="card" id="musical-instruments"><img src="imgs/generated-musical-instruments.png" alt="Musical instruments and sound"><div class="card-body"><span class="tag">Interactive Sound</span><h3>Musical Instruments</h3><p>Craftsmanship of instrument-making, resonance, tactile rhythm exploration, performance traditions, and visitor interaction.</p></div></article>
-      <article class="card" id="jewellery"><img src="imgs/jewellery_chatgpt.png" alt="Indian jewellery collection"><div class="card-body"><span class="tag">Jewellery</span><h3>Indian Jewellery</h3><p>A curated collection of traditional and contemporary jewellery — jhumkas, bangles, anklets, nose rings, and layered necklaces inspired by different regions of India.</p></div></article>
+      <article class="card" id="spice-archive"><img src="imgs/generated-spice-archive.png" alt="Spice archive"><div class="card-body"><span class="tag" data-i18n="stalls.card.spice.tag">Cultura Materiale</span><h3 data-i18n="stalls.card.spice.h3">Archivio delle Spezie</h3><p data-i18n="stalls.card.spice.p">Le spezie vengono presentate attraverso il patrimonio agricolo, il colore, la texture e il significato nel commercio globale.</p></div></article>
+      <article class="card" id="fragrance-chamber"><img src="imgs/generated-fragrance-chamber.png" alt="Fragrance chamber"><div class="card-body"><span class="tag" data-i18n="stalls.card.fragrance.tag">Profumeria Naturale</span><h3 data-i18n="stalls.card.fragrance.h3">Camera delle Fragranze</h3><p data-i18n="stalls.card.fragrance.p">Ingredienti materiali, artigianalità, memoria e narrazione culturale attraverso la storia della fragranza.</p></div></article>
+      <article class="card" id="ayurvedic-products"><img src="imgs/ayurveda_gemini.jfif" alt="Ayurvedic products"><div class="card-body"><span class="tag" data-i18n="stalls.card.ayurveda.tag">Conoscenza Botanica</span><h3 data-i18n="stalls.card.ayurveda.h3">Prodotti Ayurvedici</h3><p data-i18n="stalls.card.ayurveda.p">Tradizioni di bellezza e benessere presentate attraverso l'esplorazione degli ingredienti e il patrimonio materiale.</p></div></article>
+      <article class="card" id="musical-instruments"><img src="imgs/generated-musical-instruments.png" alt="Musical instruments and sound"><div class="card-body"><span class="tag" data-i18n="stalls.card.music.tag">Suono Interattivo</span><h3 data-i18n="stalls.card.music.h3">Strumenti Musicali</h3><p data-i18n="stalls.card.music.p">Artigianalità della costruzione di strumenti, risonanza, esplorazione del ritmo tattile, tradizioni performative e interazione con i visitatori.</p></div></article>
+      <article class="card" id="jewellery"><img src="imgs/jewellery_chatgpt.png" alt="Indian jewellery collection"><div class="card-body"><span class="tag" data-i18n="stalls.card.jewellery.tag">Gioielleria</span><h3 data-i18n="stalls.card.jewellery.h3">Gioielleria Indiana</h3><p data-i18n="stalls.card.jewellery.p">Una collezione curata di gioielleria tradizionale e contemporanea — jhumkas, bracciali, cavigliere, anelli al naso e collane stratificate ispirate a diverse regioni dell'India.</p></div></article>
     </div>
   </section>
 
   <section class="section paper split" id="main-stage">
     <div><img src="imgs/mainstage_chatgpt.png" alt="Main stage grand opening performance"></div>
     <div class="copy">
-      <div class="eyebrow">Live Programme</div>
-      <h2>Main<br>Stage</h2>
-      <p>The centrepiece of the event. Opens with a formal ceremony featuring the Consul General of India and a Comune di Milano representative.</p>
-      <p>Followed by classical Kathak and Bharatanatyam dance, a professional Bollywood medley troupe, and a live Sitar &amp; fusion music ensemble.</p>
+      <div class="eyebrow" data-i18n="stalls.stage.eyebrow">Programma Live</div>
+      <h2 data-i18n="stalls.stage.h2">Palco<br>Principale</h2>
+      <p data-i18n="stalls.stage.p1">Il fulcro dell'evento. Si apre con una cerimonia formale con il Console Generale dell'India e un rappresentante del Comune di Milano.</p>
+      <p data-i18n="stalls.stage.p2">Seguono danza classica Kathak e Bharatanatyam, una troupe professionale di medley Bollywood e un ensemble live Sitar &amp; musica fusion.</p>
       <div class="list">
-        <div class="list-item"><h3>Grand Opening Ceremony</h3><p>Consul General of India &amp; Comune di Milano representative.</p></div>
-        <div class="list-item"><h3>Kathak &amp; Bharatanatyam</h3><p>Classical Indian dance performances.</p></div>
-        <div class="list-item"><h3>Bollywood Medley Troupe</h3><p>Professional contemporary Bollywood performance.</p></div>
-        <div class="list-item"><h3>Sitar &amp; Fusion Ensemble</h3><p>Live music performance.</p></div>
+        <div class="list-item"><h3 data-i18n="stalls.stage.item1.h3">Cerimonia di Apertura Solenne</h3><p data-i18n="stalls.stage.item1.p">Console Generale dell'India e rappresentante del Comune di Milano.</p></div>
+        <div class="list-item"><h3 data-i18n="stalls.stage.item2.h3">Kathak e Bharatanatyam</h3><p data-i18n="stalls.stage.item2.p">Performance di danza classica indiana.</p></div>
+        <div class="list-item"><h3 data-i18n="stalls.stage.item3.h3">Troupe Medley Bollywood</h3><p data-i18n="stalls.stage.item3.p">Performance Bollywood contemporanea professionale.</p></div>
+        <div class="list-item"><h3 data-i18n="stalls.stage.item4.h3">Ensemble Sitar &amp; Fusion</h3><p data-i18n="stalls.stage.item4.p">Performance musicale dal vivo.</p></div>
       </div>
     </div>
   </section>
 
   <section class="section dark split" id="food-court">
     <div class="copy">
-      <div class="eyebrow">Culinary Experience</div>
-      <h2>Taste<br>of India</h2>
-      <p>A street-food style area with regional stalls covering North, South, East, and West Indian cuisines. A live dialogue between India's culinary heritage and Milan's food culture.</p>
-      <p>Includes a Masala Chai corner and traditional Indian sweets. All operators hold valid food permits, and eco-friendly packaging is required throughout.</p>
+      <div class="eyebrow" data-i18n="stalls.food.eyebrow">Esperienza Culinaria</div>
+      <h2 data-i18n="stalls.food.h2">Sapori<br>d'India</h2>
+      <p data-i18n="stalls.food.p1">Un'area in stile street food con bancarelle regionali del Nord, Sud, Est e Ovest dell'India. Un dialogo vivo tra il patrimonio culinario indiano e la cultura gastronomica milanese.</p>
+      <p data-i18n="stalls.food.p2">Include un angolo Masala Chai e dolci tradizionali indiani. Tutti gli operatori dispongono di permessi alimentari validi e in tutta la manifestazione è richiesto l'uso di imballaggi ecologici.</p>
     </div>
     <div><img src="imgs/tasteofindia_gemini.jfif" alt="Indian street food and culinary stalls"></div>
   </section>
@@ -88,26 +89,25 @@
   <section class="section split" id="womb-of-om">
     <div><img src="imgs/bhayanka_gemini.jfif" alt="Immersive tunnel installation"></div>
     <div class="copy">
-      <div class="eyebrow">Immersive Installation</div>
-      <h2>The Womb<br>of OM</h2>
-      <p>"OM" is treated as the form of the universe — a continuous cycle of creation, existence, and return.</p>
-      <p>Inspired by ancient temple carvings where life is shown emerging within sacred sound forms, the installation reflects the idea of origin held inside the symbol itself.</p>
-      <p>The umbilical cord becomes the visual thread of life, connecting beginning and becoming in one unbroken flow.</p>
-      <p>The stall translates this into an immersive experience where the body moves through cycles of birth, growth, and return.</p>
+      <div class="eyebrow" data-i18n="stalls.womb.eyebrow">Installazione Immersiva</div>
+      <h2 data-i18n="stalls.womb.h2">The Womb<br>of OM</h2>
+      <p data-i18n="stalls.womb.p1">«OM» è trattato come la forma dell'universo — un ciclo continuo di creazione, esistenza e ritorno.</p>
+      <p data-i18n="stalls.womb.p2">Ispirata alle antiche incisioni templari dove la vita emerge all'interno di forme di suono sacro, l'installazione riflette l'idea dell'origine custodita all'interno del simbolo stesso.</p>
+      <p data-i18n="stalls.womb.p3">Il cordone ombelicale diventa il filo visivo della vita, collegando inizio e divenire in un flusso ininterrotto.</p>
+      <p data-i18n="stalls.womb.p4">Lo stand trasforma questa idea in un'esperienza immersiva in cui il corpo attraversa cicli di nascita, crescita e ritorno.</p>
     </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-grid">
-    <div><h4>Bindi to Brera</h4><p>Bindi to Brera is a contemporary Indian cultural exhibition in Milan exploring craft, sensory memory, material intelligence, and participatory design.</p></div>
-    <div><h4>Experience</h4><ul><li><a href="experience.html">Overview</a></li><li><a href="stalls.html#craft">Craft Experiences</a></li><li><a href="stalls.html#material">Material Explorations</a></li><li><a href="stalls.html#main-stage">Main Stage</a></li><li><a href="stalls.html#food-court">Taste of India</a></li></ul></div>
-    <div><h4>Visit</h4><ul><li><a href="visit.html">Event Info</a></li><li><a href="visit.html#venue">Venue</a></li><li><a href="visit.html#faq">FAQ</a></li></ul></div>
-    <div><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html#partner">Partnerships</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><h4>Bindi to Brera</h4><p data-i18n="footer.brand.desc">Bindi to Brera è una mostra culturale indiana contemporanea a Milano che esplora artigianato, memoria sensoriale, intelligenza materiale e design partecipativo.</p></div>
+    <div><h4 data-i18n="footer.h.experience">Esperienza</h4><ul><li><a href="experience.html" data-i18n="footer.link.overview">Panoramica</a></li><li><a href="stalls.html#craft" data-i18n="footer.link.craft">Esperienze Artigianali</a></li><li><a href="stalls.html#material" data-i18n="footer.link.material">Esplorazioni Materiali</a></li><li><a href="stalls.html#main-stage" data-i18n="footer.link.stage">Palco Principale</a></li><li><a href="stalls.html#food-court" data-i18n="footer.link.food">Sapori d'India</a></li></ul></div>
+    <div><h4 data-i18n="footer.h.visit">Visita</h4><ul><li><a href="visit.html" data-i18n="footer.link.info">Info Evento</a></li><li><a href="visit.html#venue" data-i18n="footer.link.venue">Sede</a></li><li><a href="visit.html#faq" data-i18n="footer.link.faq">FAQ</a></li></ul></div>
+    <div><h4 data-i18n="footer.h.connect">Connettiti</h4><ul><li><a href="contact.html" data-i18n="footer.link.contact">Contattaci</a></li><li><a href="contact.html#partner" data-i18n="footer.link.partners">Partnership</a></li><li><a href="about.html" data-i18n="footer.link.about">Chi Siamo</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Bindi to Brera.</span><span>Milan, Italy | 11-12 July 2026</span></div>
+  <div class="footer-bottom"><span>&copy; 2026 Bindi to Brera.</span><span data-i18n="footer.date">Milano, Italia | 11-12 Luglio 2026</span></div>
 </footer>
 <script src="site.js"></script>
 </body>
 </html>
-

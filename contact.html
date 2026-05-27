@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact | Bindi to Brera</title>
+<title>Contatti | Bindi to Brera</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="imgs/bindi-to-brera-logo.png" type="image/png">
@@ -12,44 +12,51 @@
 <nav class="site-nav">
   <a class="brand" href="index.html"><img src="imgs/bindi-to-brera-logo.png" alt="Bindi to Brera logo">Bindi to Brera</a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="stalls.html">Stalls</a></li>
-    <li><a href="visit.html">Visit</a></li>
-    <li><a class="active" href="contact.html">Contact</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="about.html" data-i18n="nav.about">Chi Siamo</a></li>
+    <li><a href="experience.html" data-i18n="nav.experience">Esperienza</a></li>
+    <li><a href="stalls.html" data-i18n="nav.stalls">Mostre</a></li>
+    <li><a href="visit.html" data-i18n="nav.visit">Visita</a></li>
+    <li><a class="active" href="contact.html" data-i18n="nav.contact">Contatti</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle">EN</button>
   <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-  <a class="nav-cta" href="visit.html">Visit</a>
+  <a class="nav-cta" href="visit.html" data-i18n="nav.cta">Visita</a>
 </nav>
 
 <main>
   <section class="page-hero">
     <img src="imgs/visit_expect_gemini.jfif" alt="Exhibition material detail">
     <div class="page-hero-content">
-      <div class="eyebrow">Contact</div>
-      <h1>Work<br>With Us</h1>
-      <p>For partnerships, press, institutional enquiries, or visitor information, reach the Bindi to Brera team.</p>
+      <div class="eyebrow" data-i18n="contact.hero.eyebrow">Contatti</div>
+      <h1 data-i18n="contact.hero.h1">Collabora<br>Con Noi</h1>
+      <p data-i18n="contact.hero.p">Per partnership, stampa, richieste istituzionali o informazioni per i visitatori, contatta il team di Bindi to Brera.</p>
     </div>
   </section>
 
   <section class="section dark split">
     <div class="copy">
-      <div class="eyebrow">Contact Information</div>
-      <h2>Let's<br>Connect</h2>
+      <div class="eyebrow" data-i18n="contact.info.eyebrow">Informazioni di Contatto</div>
+      <h2 data-i18n="contact.info.h2">Connettiamoci</h2>
       <div class="list">
-        <div class="list-item"><h3>General Enquiries</h3><p>info@binditobrera.it</p></div>
-        <div class="list-item"><h3>Support</h3><p>support@binditobrera.it</p></div>
-        <div class="list-item"><h3>Partnerships</h3><p>partners@binditobrera.it</p></div>
-        <div class="list-item"><h3>Location</h3><p>Fabbrica del Vapore, Milan | 11-12 July 2026</p></div>
+        <div class="list-item"><h3 data-i18n="contact.info.general.h3">Richieste Generali</h3><p>info@binditobrera.it</p></div>
+        <div class="list-item"><h3 data-i18n="contact.info.support.h3">Supporto</h3><p>support@binditobrera.it</p></div>
+        <div class="list-item"><h3 data-i18n="contact.info.partners.h3">Partnership</h3><p>partners@binditobrera.it</p></div>
+        <div class="list-item"><h3 data-i18n="contact.info.location.h3">Sede</h3><p data-i18n="contact.info.location.val">Fabbrica del Vapore, Milano | 11-12 Luglio 2026</p></div>
       </div>
     </div>
     <form class="form" id="contact-form">
-      <label>Name<input id="cf-name" type="text" required></label>
-      <label>Email<input id="cf-email" type="email" required></label>
-      <label>Type of Enquiry<select id="cf-enquiry"><option>General</option><option>Partnership</option><option>Press</option><option>Institutional</option><option>Volunteer</option></select></label>
-      <label>Message<textarea id="cf-message" required></textarea></label>
-      <button class="btn fill" type="submit" id="cf-btn">Send Message</button>
+      <label><span data-i18n="contact.form.name">Nome</span><input id="cf-name" type="text" required></label>
+      <label><span data-i18n="contact.form.email">Email</span><input id="cf-email" type="email" required></label>
+      <label><span data-i18n="contact.form.enquiry">Tipo di Richiesta</span><select id="cf-enquiry">
+        <option data-i18n="contact.form.opt.general">Generale</option>
+        <option data-i18n="contact.form.opt.partnership">Partnership</option>
+        <option data-i18n="contact.form.opt.press">Stampa</option>
+        <option data-i18n="contact.form.opt.institutional">Istituzionale</option>
+        <option data-i18n="contact.form.opt.volunteer">Volontariato</option>
+      </select></label>
+      <label><span data-i18n="contact.form.message">Messaggio</span><textarea id="cf-message" required></textarea></label>
+      <button class="btn fill" type="submit" id="cf-btn" data-i18n="contact.form.btn">Invia Messaggio</button>
       <p id="cf-status" style="margin-top:1rem;font-size:.9rem;opacity:.8;display:none"></p>
     </form>
     <script>
@@ -58,8 +65,9 @@
         e.preventDefault();
         var btn = document.getElementById('cf-btn');
         var status = document.getElementById('cf-status');
+        var lang = localStorage.getItem('btb-lang') || 'it';
         btn.disabled = true;
-        btn.textContent = 'Sending…';
+        btn.textContent = lang === 'it' ? 'Invio…' : 'Sending…';
         status.style.display = 'none';
         var payload = JSON.stringify({
           name:    document.getElementById('cf-name').value.trim(),
@@ -69,43 +77,42 @@
         });
         fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: payload })
           .then(function() {
-            status.textContent = 'Message sent. We will be in touch soon.';
+            status.textContent = lang === 'it' ? 'Messaggio inviato. Ti contatteremo presto.' : 'Message sent. We will be in touch soon.';
             status.style.display = 'block';
             document.getElementById('contact-form').reset();
           })
           .catch(function() {
-            status.textContent = 'Something went wrong. Please email us directly at info@binditobrera.it';
+            status.textContent = lang === 'it' ? 'Qualcosa è andato storto. Scrivici direttamente a info@binditobrera.it' : 'Something went wrong. Please email us directly at info@binditobrera.it';
             status.style.display = 'block';
           })
           .finally(function() {
             btn.disabled = false;
-            btn.textContent = 'Send Message';
+            btn.textContent = lang === 'it' ? 'Invia Messaggio' : 'Send Message';
           });
       });
     </script>
   </section>
 
   <section class="section paper" id="partner">
-    <div class="eyebrow">Partnerships</div>
-    <h2>Aligned<br>Collaborations</h2>
+    <div class="eyebrow" data-i18n="contact.partner.eyebrow">Partnership</div>
+    <h2 data-i18n="contact.partner.h2">Collaborazioni<br>Allineate</h2>
     <div class="grid">
-      <article class="card"><div class="card-body"><span class="tag">Craft</span><h3>Artisans and Material Experts</h3><p>Collaborations with makers, studios, and cultural practitioners aligned with the exhibition's refined craft direction.</p></div></article>
-      <article class="card"><div class="card-body"><span class="tag">Institutional</span><h3>Cultural Partners</h3><p>Partnerships with museums, design bodies, universities, and civic institutions.</p></div></article>
-      <article class="card" id="volunteer"><div class="card-body"><span class="tag">Team</span><h3>Volunteers</h3><p>Support visitor flow, participation, interpretation, and exhibition operations across the two days.</p></div></article>
+      <article class="card"><div class="card-body"><span class="tag" data-i18n="contact.card.craft.tag">Artigianato</span><h3 data-i18n="contact.card.craft.h3">Artigiani ed Esperti di Materiali</h3><p data-i18n="contact.card.craft.p">Collaborazioni con makers, studi e professionisti culturali allineati con la direzione artigianale raffinata della mostra.</p></div></article>
+      <article class="card"><div class="card-body"><span class="tag" data-i18n="contact.card.institutional.tag">Istituzionale</span><h3 data-i18n="contact.card.institutional.h3">Partner Culturali</h3><p data-i18n="contact.card.institutional.p">Partnership con musei, enti di design, università e istituzioni civiche.</p></div></article>
+      <article class="card" id="volunteer"><div class="card-body"><span class="tag" data-i18n="contact.card.volunteer.tag">Team</span><h3 data-i18n="contact.card.volunteer.h3">Volontari</h3><p data-i18n="contact.card.volunteer.p">Supporto al flusso dei visitatori, alla partecipazione, all'interpretazione e alle operazioni della mostra nelle due giornate.</p></div></article>
     </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-grid">
-    <div><h4>Bindi to Brera</h4><p>Bindi to Brera is a contemporary Indian cultural exhibition in Milan exploring craft, sensory memory, material intelligence, and participatory design.</p></div>
-    <div><h4>Experience</h4><ul><li><a href="experience.html">Overview</a></li><li><a href="stalls.html#craft">Craft Experiences</a></li><li><a href="stalls.html#material">Material Explorations</a></li><li><a href="stalls.html#main-stage">Main Stage</a></li><li><a href="stalls.html#food-court">Taste of India</a></li></ul></div>
-    <div><h4>Visit</h4><ul><li><a href="visit.html">Event Info</a></li><li><a href="visit.html#venue">Venue</a></li><li><a href="visit.html#faq">FAQ</a></li></ul></div>
-    <div><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html#partner">Partnerships</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><h4>Bindi to Brera</h4><p data-i18n="footer.brand.desc">Bindi to Brera è una mostra culturale indiana contemporanea a Milano che esplora artigianato, memoria sensoriale, intelligenza materiale e design partecipativo.</p></div>
+    <div><h4 data-i18n="footer.h.experience">Esperienza</h4><ul><li><a href="experience.html" data-i18n="footer.link.overview">Panoramica</a></li><li><a href="stalls.html#craft" data-i18n="footer.link.craft">Esperienze Artigianali</a></li><li><a href="stalls.html#material" data-i18n="footer.link.material">Esplorazioni Materiali</a></li><li><a href="stalls.html#main-stage" data-i18n="footer.link.stage">Palco Principale</a></li><li><a href="stalls.html#food-court" data-i18n="footer.link.food">Sapori d'India</a></li></ul></div>
+    <div><h4 data-i18n="footer.h.visit">Visita</h4><ul><li><a href="visit.html" data-i18n="footer.link.info">Info Evento</a></li><li><a href="visit.html#venue" data-i18n="footer.link.venue">Sede</a></li><li><a href="visit.html#faq" data-i18n="footer.link.faq">FAQ</a></li></ul></div>
+    <div><h4 data-i18n="footer.h.connect">Connettiti</h4><ul><li><a href="contact.html" data-i18n="footer.link.contact">Contattaci</a></li><li><a href="contact.html#partner" data-i18n="footer.link.partners">Partnership</a></li><li><a href="about.html" data-i18n="footer.link.about">Chi Siamo</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Bindi to Brera.</span><span>Milan, Italy | 11-12 July 2026</span></div>
+  <div class="footer-bottom"><span>&copy; 2026 Bindi to Brera.</span><span data-i18n="footer.date">Milano, Italia | 11-12 Luglio 2026</span></div>
 </footer>
 <script src="site.js"></script>
 </body>
 </html>
-

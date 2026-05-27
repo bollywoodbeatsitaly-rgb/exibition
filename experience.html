@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Experience | Bindi to Brera</title>
+<title>Esperienza | Bindi to Brera</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="imgs/bindi-to-brera-logo.png" type="image/png">
@@ -12,131 +12,132 @@
 <nav class="site-nav">
   <a class="brand" href="index.html"><img src="imgs/bindi-to-brera-logo.png" alt="Bindi to Brera logo">Bindi to Brera</a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a class="active" href="experience.html">Experience</a></li>
-    <li><a href="stalls.html">Stalls</a></li>
-    <li><a href="visit.html">Visit</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="about.html" data-i18n="nav.about">Chi Siamo</a></li>
+    <li><a class="active" href="experience.html" data-i18n="nav.experience">Esperienza</a></li>
+    <li><a href="stalls.html" data-i18n="nav.stalls">Mostre</a></li>
+    <li><a href="visit.html" data-i18n="nav.visit">Visita</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">Contatti</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle">EN</button>
   <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-  <a class="nav-cta" href="visit.html">Visit</a>
+  <a class="nav-cta" href="visit.html" data-i18n="nav.cta">Visita</a>
 </nav>
 
 <main>
   <section class="page-hero">
     <img src="imgs/rasas_hero_gemini.jfif" alt="Nine Rasas emotional framework">
     <div class="page-hero-content">
-      <div class="eyebrow">The Emotional Framework</div>
-      <h1>Nine<br>Rasas</h1>
-      <p>The exhibition is structured around the nine Rasas — Sanskrit emotional essences from Indian aesthetic philosophy. Every stall, workshop, and installation maps to one or more of these states.</p>
+      <div class="eyebrow" data-i18n="exp.hero.eyebrow">Il Quadro Emotivo</div>
+      <h1 data-i18n="exp.hero.h1">Nove<br>Rasa</h1>
+      <p data-i18n="exp.hero.p">La mostra è strutturata intorno alle nove Rasa — essenze emotive sanscrite della filosofia estetica indiana. Ogni stand, workshop e installazione corrisponde a uno o più di questi stati.</p>
     </div>
   </section>
 
   <section class="section paper split">
     <div>
-      <div class="eyebrow">What Is a Rasa</div>
-      <h2>Feeling<br>as<br>Framework</h2>
+      <div class="eyebrow" data-i18n="exp.what.eyebrow">Cos'è una Rasa</div>
+      <h2 data-i18n="exp.what.h2">Sentire<br>come<br>Framework</h2>
     </div>
     <div class="copy">
-      <p>Rasa — Sanskrit for "essence" or "flavour" — is a 2,000-year-old Indian aesthetic concept describing the emotional states that art and experience can evoke. The nine Rasas form the basis of classical Indian performing arts, poetry, and design.</p>
-      <p>Bindi to Brera uses this framework to organise the exhibition. Every encounter — from block printing to the Womb of OM — is intentionally placed within an emotional register. The result is not a cultural display but an emotional journey through Indian aesthetic philosophy.</p>
-      <div class="button-row"><a class="btn fill" href="stalls.html">Explore All Stalls</a></div>
+      <p data-i18n="exp.what.p1">Rasa — sanscrito per «essenza» o «sapore» — è un concetto estetico indiano di 2.000 anni che descrive gli stati emotivi che l'arte e l'esperienza possono evocare. Le nove Rasa costituiscono la base delle arti performative classiche indiane, della poesia e del design.</p>
+      <p data-i18n="exp.what.p2">Bindi to Brera usa questo framework per organizzare la mostra. Ogni incontro — dalla stampa con blocchi al Womb of OM — è intenzionalmente collocato in un registro emotivo. Il risultato non è un'esposizione culturale ma un viaggio emotivo attraverso la filosofia estetica indiana.</p>
+      <div class="button-row"><a class="btn fill" href="stalls.html" data-i18n="exp.btn.stalls">Esplora Tutte le Mostre</a></div>
     </div>
   </section>
 
   <section class="section dark">
-    <div class="eyebrow">The Nine Emotional States</div>
-    <h2>The Rasas</h2>
+    <div class="eyebrow" data-i18n="exp.rasas.eyebrow">I Nove Stati Emotivi</div>
+    <h2 data-i18n="exp.rasas.h2">Le Rasa</h2>
     <div class="grid" style="margin-top:3rem">
 
       <article class="card">
-        <img src="imgs/srngara_gemini.jfif" alt="Srngara — Beauty">
+        <img src="imgs/srngara_gemini.jfif" alt="Srngara — Bellezza">
         <div class="card-body">
           <span class="tag">Srngara</span>
-          <h3>Beauty</h3>
-          <p>The rasa of adornment, intimacy, and sensory pleasure. The world seen through the lens of beauty and desire.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#jewellery" style="color:inherit">Indian Jewellery</a> · <a href="stalls.html#bindi" style="color:inherit">Bindi &amp; Tattoo</a> · <a href="stalls.html#saree" style="color:inherit">Saree Draping</a> · <a href="stalls.html#fragrance-chamber" style="color:inherit">Fragrance Chamber</a></p>
+          <h3 data-i18n="exp.rasa.srngara.h3">Bellezza</h3>
+          <p data-i18n="exp.rasa.srngara.p">La rasa dell'ornamento, dell'intimità e del piacere sensoriale. Il mondo visto attraverso la lente della bellezza e del desiderio.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.srngara.links">→ <a href="stalls.html#jewellery" style="color:inherit">Gioielleria Indiana</a> · <a href="stalls.html#bindi" style="color:inherit">Bindi &amp; Tatuaggio</a> · <a href="stalls.html#saree" style="color:inherit">Drappeggio del Sari</a> · <a href="stalls.html#fragrance-chamber" style="color:inherit">Camera delle Fragranze</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/rangoli2.jfif" alt="Hasya — Play and Joy">
+        <img src="imgs/rangoli2.jfif" alt="Hasya — Gioco e Gioia">
         <div class="card-body">
           <span class="tag">Hasya</span>
-          <h3>Play &amp; Joy</h3>
-          <p>The rasa of laughter, lightness, and playful creation — when making mistakes becomes part of the joy.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#block" style="color:inherit">Block Printing</a> · <a href="stalls.html#bandana" style="color:inherit">Upcycled Bandana</a></p>
+          <h3 data-i18n="exp.rasa.hasya.h3">Gioco e Gioia</h3>
+          <p data-i18n="exp.rasa.hasya.p">La rasa della risata, della leggerezza e della creazione giocosa — quando fare errori diventa parte della gioia.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.hasya.links">→ <a href="stalls.html#block" style="color:inherit">Stampa con Blocchi</a> · <a href="stalls.html#bandana" style="color:inherit">Bandana Riciclata</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/ayurveda_gemini.jfif" alt="Karuna — Softness and Care">
+        <img src="imgs/ayurveda_gemini.jfif" alt="Karuna — Dolcezza e Cura">
         <div class="card-body">
           <span class="tag">Karuna</span>
-          <h3>Softness &amp; Care</h3>
-          <p>The rasa of compassion and tenderness — the therapeutic process of making, healing, and nurturing.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#ayurvedic-products" style="color:inherit">Ayurvedic Products</a> · <a href="stalls.html#pottery" style="color:inherit">Live Pottery</a></p>
+          <h3 data-i18n="exp.rasa.karuna.h3">Dolcezza e Cura</h3>
+          <p data-i18n="exp.rasa.karuna.p">La rasa della compassione e della tenerezza — il processo terapeutico del fare, guarire e nutrire.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.karuna.links">→ <a href="stalls.html#ayurvedic-products" style="color:inherit">Prodotti Ayurvedici</a> · <a href="stalls.html#pottery" style="color:inherit">Ceramica</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/spices.jfif" alt="Raudra — Intensity and Heat">
+        <img src="imgs/spices.jfif" alt="Raudra — Intensità e Calore">
         <div class="card-body">
           <span class="tag">Raudra</span>
-          <h3>Intensity &amp; Heat</h3>
-          <p>The rasa of force, passion, and raw energy — the overwhelming heat and power of India's material world.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#spice-archive" style="color:inherit">Spice Archive</a></p>
+          <h3 data-i18n="exp.rasa.raudra.h3">Intensità e Calore</h3>
+          <p data-i18n="exp.rasa.raudra.p">La rasa della forza, della passione e dell'energia grezza — il calore e il potere travolgenti del mondo materiale indiano.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.raudra.links">→ <a href="stalls.html#spice-archive" style="color:inherit">Archivio delle Spezie</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/vira_gemini.jfif" alt="Vira — Energy and Mastery">
+        <img src="imgs/vira_gemini.jfif" alt="Vira — Energia e Maestria">
         <div class="card-body">
           <span class="tag">Vira</span>
-          <h3>Energy &amp; Mastery</h3>
-          <p>The rasa of skill, confidence, and disciplined action — craft performed with precision and transformative power.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#block" style="color:inherit">Block Printing</a> · <a href="stalls.html#saree" style="color:inherit">Saree Draping</a> · <a href="stalls.html#calligraphy" style="color:inherit">Calligraphy</a></p>
+          <h3 data-i18n="exp.rasa.vira.h3">Energia e Maestria</h3>
+          <p data-i18n="exp.rasa.vira.p">La rasa dell'abilità, della fiducia e dell'azione disciplinata — l'artigianato eseguito con precisione e potere trasformativo.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.vira.links">→ <a href="stalls.html#block" style="color:inherit">Stampa con Blocchi</a> · <a href="stalls.html#saree" style="color:inherit">Drappeggio del Sari</a> · <a href="stalls.html#calligraphy" style="color:inherit">Calligrafia</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/bhayanka_gemini.jfif" alt="Bhayanka — Awe and the Unknown">
+        <img src="imgs/bhayanka_gemini.jfif" alt="Bhayanka — Meraviglia e l'Ignoto">
         <div class="card-body">
           <span class="tag">Bhayanka</span>
-          <h3>Awe &amp; the Unknown</h3>
-          <p>The rasa of overwhelm and mystery — the confrontation with something larger than the self.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#womb-of-om" style="color:inherit">The Womb of OM</a></p>
+          <h3 data-i18n="exp.rasa.bhayanka.h3">Meraviglia e l'Ignoto</h3>
+          <p data-i18n="exp.rasa.bhayanka.p">La rasa del sopraffacimento e del mistero — il confronto con qualcosa di più grande di sé.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.bhayanka.links">→ <a href="stalls.html#womb-of-om" style="color:inherit">The Womb of OM</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/generated-musical-instruments.png" alt="Adhbutha — Wonder and Discovery">
+        <img src="imgs/generated-musical-instruments.png" alt="Adhbutha — Stupore e Scoperta">
         <div class="card-body">
           <span class="tag">Adhbutha</span>
-          <h3>Wonder &amp; Discovery</h3>
-          <p>The rasa of astonishment — when a pattern emerges, a language transforms visually, a sound is felt physically.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#musical-instruments" style="color:inherit">Musical Instruments</a> · <a href="stalls.html#block" style="color:inherit">Block Printing</a> · <a href="stalls.html#calligraphy" style="color:inherit">Calligraphy</a></p>
+          <h3 data-i18n="exp.rasa.adhbutha.h3">Stupore e Scoperta</h3>
+          <p data-i18n="exp.rasa.adhbutha.p">La rasa dello stupore — quando emerge uno schema, un linguaggio si trasforma visivamente, un suono viene percepito fisicamente.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.adhbutha.links">→ <a href="stalls.html#musical-instruments" style="color:inherit">Strumenti Musicali</a> · <a href="stalls.html#block" style="color:inherit">Stampa con Blocchi</a> · <a href="stalls.html#calligraphy" style="color:inherit">Calligrafia</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/bibhatsa_gemini.jfif" alt="Bibhatsa — Raw Material Truth">
+        <img src="imgs/bibhatsa_gemini.jfif" alt="Bibhatsa — Verità Materiale Grezza">
         <div class="card-body">
           <span class="tag">Bibhatsa</span>
-          <h3>Raw Material Truth</h3>
-          <p>The rasa of the unprocessed and unrefined — matter in its origin state before it becomes commodity or luxury.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#spice-archive" style="color:inherit">Spice Archive</a> · <a href="stalls.html#pottery" style="color:inherit">Live Pottery</a> · <a href="stalls.html#ayurvedic-products" style="color:inherit">Ayurvedic Products</a></p>
+          <h3 data-i18n="exp.rasa.bibhatsa.h3">Verità Materiale Grezza</h3>
+          <p data-i18n="exp.rasa.bibhatsa.p">La rasa dell'non lavorato e non raffinato — la materia nel suo stato d'origine prima di diventare merce o lusso.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.bibhatsa.links">→ <a href="stalls.html#spice-archive" style="color:inherit">Archivio delle Spezie</a> · <a href="stalls.html#pottery" style="color:inherit">Ceramica</a> · <a href="stalls.html#ayurvedic-products" style="color:inherit">Prodotti Ayurvedici</a></p>
         </div>
       </article>
 
       <article class="card">
-        <img src="imgs/santa_chatgpt.png" alt="Santa — Calm and Balance">
+        <img src="imgs/santa_chatgpt.png" alt="Santa — Calma ed Equilibrio">
         <div class="card-body">
           <span class="tag">Santa</span>
-          <h3>Calm &amp; Balance</h3>
-          <p>The rasa of peace and equanimity — rest, sensory reset, and the quiet that follows full engagement.</p>
-          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65">→ <a href="stalls.html#ayurvedic-products" style="color:inherit">Ayurvedic Products</a></p>
+          <h3 data-i18n="exp.rasa.santa.h3">Calma ed Equilibrio</h3>
+          <p data-i18n="exp.rasa.santa.p">La rasa della pace e dell'equanimità — riposo, reset sensoriale e il silenzio che segue il pieno coinvolgimento.</p>
+          <p style="margin-top:.8rem;font-size:.8rem;opacity:.65" data-i18n="exp.rasa.santa.links">→ <a href="stalls.html#ayurvedic-products" style="color:inherit">Prodotti Ayurvedici</a></p>
         </div>
       </article>
 
@@ -144,12 +145,12 @@
   </section>
 
   <section class="section clay split">
-    <div><h2>Ready to<br>Explore?</h2></div>
+    <div><h2 data-i18n="exp.ready.h2">Pronto a<br>Esplorare?</h2></div>
     <div class="copy">
-      <p>Each stall and installation connects to one or more of these emotional states. Visit the full stalls directory to see every experience in detail.</p>
+      <p data-i18n="exp.ready.p">Ogni stand e installazione si connette a uno o più di questi stati emotivi. Visita la directory completa delle mostre per vedere ogni esperienza in dettaglio.</p>
       <div class="button-row">
-        <a class="btn fill" href="stalls.html">See All Stalls</a>
-        <a class="btn" href="about.html#navarasa">About the Nine Rasas</a>
+        <a class="btn fill" href="stalls.html" data-i18n="exp.btn.stalls2">Vedi Tutte le Mostre</a>
+        <a class="btn" href="about.html#navarasa" data-i18n="exp.btn.about">Informazioni sulle Nove Rasa</a>
       </div>
     </div>
   </section>
@@ -157,14 +158,13 @@
 
 <footer class="footer">
   <div class="footer-grid">
-    <div><h4>Bindi to Brera</h4><p>Bindi to Brera is a contemporary Indian cultural exhibition in Milan exploring craft, sensory memory, material intelligence, and participatory design.</p></div>
-    <div><h4>Experience</h4><ul><li><a href="experience.html">Overview</a></li><li><a href="stalls.html#craft">Craft Experiences</a></li><li><a href="stalls.html#material">Material Explorations</a></li><li><a href="stalls.html#main-stage">Main Stage</a></li><li><a href="stalls.html#food-court">Taste of India</a></li></ul></div>
-    <div><h4>Visit</h4><ul><li><a href="visit.html">Event Info</a></li><li><a href="visit.html#venue">Venue</a></li><li><a href="visit.html#faq">FAQ</a></li></ul></div>
-    <div><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html#partner">Partnerships</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><h4>Bindi to Brera</h4><p data-i18n="footer.brand.desc">Bindi to Brera è una mostra culturale indiana contemporanea a Milano che esplora artigianato, memoria sensoriale, intelligenza materiale e design partecipativo.</p></div>
+    <div><h4 data-i18n="footer.h.experience">Esperienza</h4><ul><li><a href="experience.html" data-i18n="footer.link.overview">Panoramica</a></li><li><a href="stalls.html#craft" data-i18n="footer.link.craft">Esperienze Artigianali</a></li><li><a href="stalls.html#material" data-i18n="footer.link.material">Esplorazioni Materiali</a></li><li><a href="stalls.html#main-stage" data-i18n="footer.link.stage">Palco Principale</a></li><li><a href="stalls.html#food-court" data-i18n="footer.link.food">Sapori d'India</a></li></ul></div>
+    <div><h4 data-i18n="footer.h.visit">Visita</h4><ul><li><a href="visit.html" data-i18n="footer.link.info">Info Evento</a></li><li><a href="visit.html#venue" data-i18n="footer.link.venue">Sede</a></li><li><a href="visit.html#faq" data-i18n="footer.link.faq">FAQ</a></li></ul></div>
+    <div><h4 data-i18n="footer.h.connect">Connettiti</h4><ul><li><a href="contact.html" data-i18n="footer.link.contact">Contattaci</a></li><li><a href="contact.html#partner" data-i18n="footer.link.partners">Partnership</a></li><li><a href="about.html" data-i18n="footer.link.about">Chi Siamo</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Bindi to Brera.</span><span>Milan, Italy | 11-12 July 2026</span></div>
+  <div class="footer-bottom"><span>&copy; 2026 Bindi to Brera.</span><span data-i18n="footer.date">Milano, Italia | 11-12 Luglio 2026</span></div>
 </footer>
 <script src="site.js"></script>
 </body>
 </html>
-

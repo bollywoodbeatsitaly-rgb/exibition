@@ -121,6 +121,8 @@ label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(
   .footer-grid{gap:2rem}
   h2{font-size:clamp(2.8rem,10vw,5.5rem)}
 }
+.lang-toggle{background:none;border:1px solid rgba(15,13,10,.32);color:var(--ink);font-family:inherit;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.38rem .7rem;cursor:pointer;border-radius:2px;transition:background .2s,color .2s;flex-shrink:0}
+.lang-toggle:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
 @media (max-width:480px){
   .site-nav{padding:.85rem 1rem}
   .hero{padding:6.5rem 1rem 2.5rem}
