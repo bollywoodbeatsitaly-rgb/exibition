@@ -88,7 +88,9 @@ function handleRegistration(data) {
   }
   sheet.appendRow([timestamp, ref, name, email, attendees]);
 
-  var qrBlob = generateQRBlob(name, attendees, ref);
+  // QR generation is best-effort — emails always send even if it fails
+  var qrBlob = null;
+  try { qrBlob = generateQRBlob(name, attendees, ref); } catch(e) {}
 
   GmailApp.sendEmail(
     'support@binditobrera.it',
@@ -97,16 +99,18 @@ function handleRegistration(data) {
     { from: 'support@binditobrera.it', name: 'Bindi to Brera', htmlBody: registrationInternalHtml(name, email, attendees, ref, timestamp) }
   );
 
+  var visitorOpts = {
+    from: 'support@binditobrera.it',
+    name: 'Bindi to Brera',
+    htmlBody: registrationVisitorHtml(name, attendees, ref, qrBlob !== null)
+  };
+  if (qrBlob) visitorOpts.inlineImages = { registrationQR: qrBlob };
+
   GmailApp.sendEmail(
     email,
     'Registrazione confermata — Bindi to Brera · ' + ref,
     'La tua registrazione per Bindi to Brera è confermata. Ref: ' + ref,
-    {
-      from: 'support@binditobrera.it',
-      name: 'Bindi to Brera',
-      htmlBody: registrationVisitorHtml(name, attendees, ref),
-      inlineImages: { registrationQR: qrBlob }
-    }
+    visitorOpts
   );
 
   return ContentService
@@ -250,8 +254,25 @@ function solidDivider() {
 
 // ── Registration: visitor confirmation ─────────
 
-function registrationVisitorHtml(name, attendees, ref) {
+function registrationVisitorHtml(name, attendees, ref, hasQR) {
   var attendeeLabel = attendees + ' ' + (attendees == 1 ? 'persona' : 'persone');
+
+  var qrBlock = hasQR
+    // QR ticket block — when image is available
+    ? '<table role="presentation" width="100%" cellpadding="0" cellspacing="0">'
+      + '<tr><td align="center" style="background-color:#f3ecdc;border:1px solid rgba(15,13,10,.1);padding:28px 20px">'
+      + '<img class="qr-img" src="cid:registrationQR" width="200" height="200" alt="QR di accesso" style="display:block;margin:0 auto;border:0">'
+      + '<p style="margin:14px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(15,13,10,.4)">Mostra all\'ingresso &nbsp;·&nbsp; Show at entry</p>'
+      + '</td></tr>'
+      + '</table>'
+    // Fallback — plain ref when QR could not be generated
+    : '<table role="presentation" width="100%" cellpadding="0" cellspacing="0">'
+      + '<tr><td align="center" style="background-color:#f3ecdc;border:1px solid rgba(15,13,10,.1);padding:28px 20px">'
+      + '<p style="margin:0 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#D06224">Codice di accesso · Entry code</p>'
+      + '<p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:26px;font-weight:800;color:#0f0d0a;letter-spacing:2px">' + ref + '</p>'
+      + '<p style="margin:10px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(15,13,10,.4)">Mostra all\'ingresso &nbsp;·&nbsp; Show at entry</p>'
+      + '</td></tr>'
+      + '</table>';
 
   var body = ''
     // Tag + headline
@@ -259,13 +280,7 @@ function registrationVisitorHtml(name, attendees, ref) {
     + '<h1 class="hero-title" style="margin:10px 0 32px;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:800;color:#0f0d0a;line-height:1.1;letter-spacing:-0.5px">'
     + 'Ci vediamo<br>a Milano.</h1>'
 
-    // QR ticket block
-    + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0">'
-    + '<tr><td align="center" style="background-color:#f3ecdc;border:1px solid rgba(15,13,10,.1);padding:28px 20px">'
-    + '<img class="qr-img" src="cid:registrationQR" width="200" height="200" alt="QR di accesso" style="display:block;margin:0 auto;border:0">'
-    + '<p style="margin:14px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(15,13,10,.4)">Mostra all\'ingresso &nbsp;·&nbsp; Show at entry</p>'
-    + '</td></tr>'
-    + '</table>'
+    + qrBlock
 
     + dashedDivider()
 
